@@ -1,6 +1,7 @@
 function Preferences() {}
 
-Person.prototype.data = {};
+Preferences.prototype.data = {};
+Preferences.prototype.fileReader;
 
 Preferences.prototype.load = function(path, onDoneCallback){
 	
