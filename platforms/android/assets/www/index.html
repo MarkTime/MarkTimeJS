@@ -10,15 +10,8 @@
 		<!-- JavaScript Imports -->
 		<script type="text/javascript" src="cordova.js"></script>
 		<script src="js/jQuery/jquery-1.7.1.min.js"></script>
-		<script src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>		
 		<script src="js/fastclick.js"></script>
-		
-		<!-- JavaScript Listener Definitions -->
-		<script type="text/javascript">
-			app.initialize();
-		</script>
-				
 	</head> 
 
 	<body> 
@@ -28,19 +21,44 @@
 			<div data-role="header">
 				<h1>Main Menu</h1>				
 			</div>
-
 			<!-- Body -->
 			<div data-role="content" >
 
 				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">General</li>
 					<li><a href="examplepage.html" data-transition="slide">Example UI Page</a></li>
+					<li data-role="list-divider">Settings</li>
 					<li><a href="#" data-transition="slide">Synchronise</a></li>
 					<li><a href="#" data-transition="slide">Settings</a></li>
-				</ul>
-			
-			</div>
-			
+				</ul>			
+			</div>			
 		</div>
+		
+		<!-- JavaScript Starting Point -->
+		<script src="js/index.js"></script>
+		<script src="js/preferences.js"></script>
+		<script type="text/javascript">			
+			var app = {
+				bindEvents: function() {
+					document.addEventListener('deviceready', this.onDeviceReady, false);
+				},
+
+				onDeviceReady: function() { //Gets called when the deviceready event gets fired by Cordova
+					FastClick.attach(document.body);
+					this.initialize();
+				},
+				
+				//Gets called once onDeviceReady has run
+				//This function loads databases, files, etc
+				initialize: function(){
+					var db = window.openDatabase();
+					var settings = new Preferences("config");
+				}
+			};
+			
+			app.bindEvents();
+			
+		</script>
 		
 	</body>
 	

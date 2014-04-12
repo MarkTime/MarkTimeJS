@@ -25,6 +25,10 @@ C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQu
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\jquery.mobile.custom.structure.min.css \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\jquery.mobile.custom.theme.min.css \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\ajax-loader.gif \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\icons-18-black.png \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\icons-18-white.png \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\icons-36-black.png \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\icons-36-white.png \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\icons-png \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\icons-svg \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images\icons-png\action-black.png \
