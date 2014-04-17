@@ -16,7 +16,6 @@
 	</head> 
 
 	<body> 
-
 		<div data-role="page" id="mainmenu">
 			<!-- Header -->
 			<div data-role="header">
@@ -24,19 +23,31 @@
 			</div>
 			
 			<!-- Body -->
+			
 			<div data-role="content" >
 			
 				<!-- ListView -->
 				<ul data-role="listview" data-inset="true">
-					<li data-role="list-divider">General</li>
+					<li data-role="list-divider">Plug-ins</li>
 					<li><a href="examplepage.html" data-transition="slide">Example UI Page</a></li>
-					<li data-role="list-divider">Settings</li>
-					<li><a href="#" data-transition="slide">Synchronise</a></li>
-					<li><a href="#" data-transition="slide">Settings</a></li>
+					<li data-role="list-divider">Other</li>
+					<li><a href="sync.html" data-transition="slide">Synchronise</a></li>
+					<li><a href="settings.html" data-transition="slide">Settings</a></li>
 				</ul>			
 				
 			</div>						
 		</div>
+<<<<<<< HEAD
+	
+		<!-- JavaScript Starting Point -->
+		<script src="js/index.js"></script>
+		<script src="js/preferences.js"></script>
+		<script type="text/javascript">			
+			var app = {
+				bindEvents: function() {
+					document.addEventListener('deviceready', this.onDeviceReady, false);
+				},
+=======
 				
 		<script type="text/javascript">
 		
@@ -58,6 +69,15 @@
 			function onDeviceReady() { //Gets called when the deviceready event gets fired by Cordova				
 				initialize();
 			}
+<<<<<<< HEAD
+=======
+>>>>>>> 6ba97d36e932e508eafc179dafefe0602597d360
+
+			function myFileCallback(event){
+				console.log(event);
+				console.log("Called myFileCallback!");
+			}
+>>>>>>> dbb692e3cd7cc08358a7774950f52f8fa8206f24
 			
 			function onFileSystemAquisition(fs){
 				fileSystem = fs;			

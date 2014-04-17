@@ -4,6 +4,11 @@
         "uninstalled": []
     },
     "config_munge": {
+<<<<<<< HEAD
+        "files": {}
+    },
+    "installed_plugins": {},
+=======
         "res/xml/config.xml": {
             "/*": {
                 "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>": 1,
@@ -24,5 +29,6 @@
             "PACKAGE_NAME": "marktimejs.boar401s2"
         }
     },
+>>>>>>> 6ba97d36e932e508eafc179dafefe0602597d360
     "dependent_plugins": {}
 }

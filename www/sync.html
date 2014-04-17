@@ -14,15 +14,24 @@
 			<!-- Header -->
 			<div data-role="header">
 				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="arrow-l">Back</a>
-				<h1>Example UI Page</h1>
+				<h1>Synchronize</h1>
 				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="home">Home</a>
 			</div>
 
 			<!-- Body -->
 			<div data-role="content" >
-				<p>This is an example UI page</p>
-			</div>
+				<button class="ui-btn" id="sync" onclick="onSyncroniseClick()">Sync Now</button>
+				<h4 id="syncing" align="center"></h4>
+				<button class="ui-btn">Force Download</button>
+				<p>Press "Sync Now" to send your marking to the database. Press "Force Download" to force your device to download the latest version of the database. WARNING: This will override any recent changes you have made locally.</p>
+				<script>					
+					function onSyncroniseClick()
+					{
+					
+					}
+				</script>
+			</div><!--STILL WORKING ON THIS BIT-->
 		</div><!-- /page one -->
-		
 	</body>
+	
 </html>

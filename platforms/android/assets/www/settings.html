@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>MarkTimeJS</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="css/jQuery/jquery.mobile-1.1.0-rc.2.min.css" />
+		<script src="js/jQuery/jquery-1.7.1.min.js"></script>
+		<script src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>
+	</head> 
+
+	<body> 
+
+		<div data-role="page" id="body">
+			<!-- Header -->
+			<div data-role="header">
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="arrow-l">Back</a>
+				<h1>Settings</h1>				
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="home">Home</a>
+			</div>
+
+			<!-- Body -->
+			<div data-role="content" >
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Google Account Settings</h4>
+				<ul data-role="listview" data-inset="false">
+					<li>Username: <input type="text" name="username" id="basic" value="" data-mini="true" /></li>
+					<li>Password: <input type="password" name="password" id="basic" value="" data-mini="true" /></li>
+				</ul>	
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Database Settings<h4>
+				<ul data-role="listview" data-inset="false">
+					<li>Database Name: <input type="text" name="databaseName" id="basic" value="" data-mini="true" /></li>
+					<li>Database Password: <input type="password" name="databasePassword" id="basic" value="" data-mini="true" /></li>
+				</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Plug-in Manager<h4>
+				<ul data-role="listview" data-inset="false">
+					<li><a href="pluginmanager.html" data-transition="slidedown">Plug-in Store</a></li>
+					<li><a href="help.html" data-transition="slide">Plug-in Help</a></li>
+				</div>	
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Theme Selector<h4>
+					<form>
+						<fieldset data-role="controlgroup">
+						<legend>Vertical:</legend>
+							<input type="radio" name="radio-choice-v-2" id="theme1" value="1" checked="checked">
+							<label for="radio-choice-v-2a">Theme One</label>
+							<input type="radio" name="radio-choice-v-2" id="theme2" value="2">
+							<label for="radio-choice-v-2b">Theme Two</label>
+							<input type="radio" name="radio-choice-v-2" id="theme3" value="3">
+							<label for="radio-choice-v-2c">Theme Three</label>
+							<input type="radio" name="radio-choice-v-2" id="theme4" value="4">
+							<label for="radio-choice-v-2d">Theme Four</label>
+							<input type="radio" name="radio-choice-v-2" id="theme5" value="5">
+							<label for="radio-choice-v-2e">Theme Five</label>
+							<input type="radio" name="radio-choice-v-2" id="theme6" value="6">
+							<label for="radio-choice-v-2f">Theme Six</label>
+							<input type="radio" name="radio-choice-v-2" id="theme7" value="7">
+							<label for="radio-choice-v-2g">Theme Seven</label>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div><!-- /page one -->
+		
+	</body>
+</html>
