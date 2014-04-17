@@ -20,6 +20,7 @@ C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\img \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\index.html \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\js \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\task \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\index.css \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\css\jQuery\images \
@@ -37,7 +38,10 @@ C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\js\pref
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\js\jQuery\jquery-1.7.1.min.js \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\js\jQuery\jquery.mobile-1.1.0-rc.2.min.js \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\js\jQuery\jquery.mobile.custom.min.js \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\me.apla.cordova.app-preferences \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\me.apla.cordova.app-preferences\www \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\me.apla.cordova.app-preferences\www\apppreferences.js \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js \
@@ -58,4 +62,5 @@ C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\requestFileSystem.js \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android\FileSystem.js \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\assets\www\task\AppPreferences.js \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\AndroidManifest.xml \

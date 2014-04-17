@@ -6,7 +6,8 @@
     "config_munge": {
         "res/xml/config.xml": {
             "/*": {
-                "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>": 1
+                "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>": 1,
+                "<feature name=\"AppPreferences\"><param name=\"android-package\" value=\"me.apla.cordova.AppPreferences\" /></feature>": 1
             }
         },
         "AndroidManifest.xml": {
@@ -17,6 +18,9 @@
     },
     "installed_plugins": {
         "org.apache.cordova.file": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "me.apla.cordova.app-preferences": {
             "PACKAGE_NAME": "marktimejs.boar401s2"
         }
     },

@@ -12,7 +12,9 @@ Preferences.prototype.save = function(onSavedCallback){
 	var t = this;
 	fileSystem.root.getFile(this.filePath, {create: true, exclusive: false}, 
 	function(fileEntry){
-		fileEntry.createWriter(t.gotFileWriter, t.onError);
+		fileEntry.createWriter(function(writer){
+			t.gotFileWriter.call(t, writer);
+		}, t.onError);
 	}, this.onError);	
 }
 
@@ -54,7 +56,7 @@ Preferences.prototype.gotFileWriter = function(writer){
 	this.onwrite = function(evt){
 		this.onSavedCallback(true);
 	}	
-	writer.write(t.getString());
+	writer.write(this.getString());
 }
 
 Preferences.prototype.gotFileEntry_Read = function(fileEntry){ //Called when filesystem returns fileEntry
