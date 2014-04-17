@@ -11,7 +11,8 @@
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/jQuery/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>		
-		<script type="text/javascript" src="js/fastclick.js"></script>		
+		<script type="text/javascript" src="js/fastclick.js"></script>	
+		<script src="js/preferences.js"></script>
 	</head> 
 
 	<body> 
@@ -36,17 +37,16 @@
 				
 			</div>						
 		</div>
-		
-		<!-- JavaScript Starting Point -->
-		<script src="js/preferences.js"></script>
+				
 		<script type="text/javascript">
 		
 			var database;
 			var fileSystem;
+			var preferences;
 		
 			function initialize(){
 				FastClick.attach(document.body);
-				window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemAquisition, fail); //Requests the filesystem				
+				window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemAquisition, onError); //Requests the filesystem				
 			}					
 		
 			function bindEvents(){
@@ -59,14 +59,23 @@
 				initialize();
 			}
 
-			function onFileSystemAquisition(fs){
-				fileSystem = fs;
-				console.log(fileSystem);
+			function myFileCallback(event){
+				console.log(event);
 			}
 			
-			function fail(evt) {
+			function onFileSystemAquisition(fs){
+				fileSystem = fs;
+				preferences = new Preferences("config.cfg", fileSystem);
+				preferences.write("foo", "bar");
+				preferences.save(myFileCallback);
+				//preferences.load(myFileCallback);
+			}
+			
+			function onError(evt) {
 				console.log(evt.target.error.code);
 			}
+			
+			<!-- Start the wheels rolling... -->
 			
 			bindEvents(); //This is run when the page is loaded
 			

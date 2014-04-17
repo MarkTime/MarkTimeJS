@@ -42,6 +42,7 @@
 		
 			var database;
 			var fileSystem;
+			var preferences;
 		
 			function initialize(){
 				FastClick.attach(document.body);
@@ -58,9 +59,17 @@
 				initialize();
 			}
 
+			function myFileCallback(event){
+				console.log(event);
+			}
+			
 			function onFileSystemAquisition(fs){
+				console.log("File system aquired!");
 				fileSystem = fs;
-				console.log(fileSystem);
+				preferences = new Preferences("config.cfg", fileSystem);
+				preferences.write("foo", "bar");
+				preferences.save(myFileCallback);
+				//preferences.load(myFileCallback);
 			}
 			
 			function onError(evt) {
