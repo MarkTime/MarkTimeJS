@@ -4,12 +4,6 @@ function Preferences(filePath, fileSystem) {
 	this.fileReader = null;
 	this.data = {};
 	console.log("========== INITALIZED PREFERENCES! ==========");
-	
-	function gotWriter(writer){
-		console.log("Got writer!");
-		writer.onwrite = function(){console.log("Finished writing!");};
-		writer.write(this.getString());		
-	}	
 }
 
 Preferences.prototype.save = function(onSavedCallback){
@@ -51,13 +45,13 @@ Preferences.prototype.printQuota = function(){
 
 /* ========== Events ========== */
 
-/*Preferences.prototype.gotFileWriter = function(writer){	
+Preferences.prototype.gotFileWriter = function(writer){	
 	console.log("Got the file writer!");
 	this.onwrite = function(evt){
 		this.onSavedCallback(true);
 	}	
 	writer.write(this.getString());
-}*/
+}
 
 Preferences.prototype.gotFileEntry = function(fileEntry){
 	fileEntry.createWriter(function(writer){console.log("Writer created!");}, this.onError);
