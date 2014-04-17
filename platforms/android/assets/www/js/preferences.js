@@ -4,18 +4,16 @@ function Preferences(filePath, fileSystem) {
 	this.fileReader = null;
 	this.data = {};
 	console.log("========== INITALIZED PREFERENCES! ==========");
-	
-	function gotWriter(writer){
-		console.log("Got writer!");
-		writer.onwrite = function(){console.log("Finished writing!");};
-		writer.write(this.getString());		
-	}	
 }
 
 Preferences.prototype.save = function(onSavedCallback){
 	this.onSavedCallback = onSavedCallback;
 	this.currentCallback = this.onSavedCallback;
-	fileSystem.root.getFile(this.filePath, {create: true, exclusive: false}, this.gotFileEntry, this.onError);	
+	var t = this;
+	fileSystem.root.getFile(this.filePath, {create: true, exclusive: false}, 
+	function(fileEntry){
+		fileEntry.createWriter(t.gotFileWriter, t.onError);
+	}, this.onError);	
 }
 
 Preferences.prototype.load = function(onLoadedCallback){
@@ -51,17 +49,12 @@ Preferences.prototype.printQuota = function(){
 
 /* ========== Events ========== */
 
-/*Preferences.prototype.gotFileWriter = function(writer){	
+Preferences.prototype.gotFileWriter = function(writer){	
 	console.log("Got the file writer!");
 	this.onwrite = function(evt){
 		this.onSavedCallback(true);
 	}	
-	writer.write(this.getString());
-}*/
-
-Preferences.prototype.gotFileEntry = function(fileEntry){
-	fileEntry.createWriter(function(writer){console.log("Writer created!");}, this.onError);
-	console.log("Creating file writer...");
+	writer.write(t.getString());
 }
 
 Preferences.prototype.gotFileEntry_Read = function(fileEntry){ //Called when filesystem returns fileEntry
