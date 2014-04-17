@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>MarkTimeJS</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="css/jQuery/jquery.mobile-1.1.0-rc.2.min.css" />
+		<script src="js/jQuery/jquery-1.7.1.min.js"></script>
+		<script src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>
+	</head> 
+
+	<body> 
+
+		<div data-role="page" id="body">
+			<!-- Header -->
+			<div data-role="header">
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="arrow-l">Back</a>
+				<h1>Synchronize</h1>
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="home">Home</a>
+			</div>
+
+			<!-- Body -->
+			<div data-role="content" >
+				<button class="ui-btn" id="sync" onclick="onSyncroniseClick()">Sync Now</button>
+				<h4 id="syncing" align="center"></h4>
+				<button class="ui-btn">Force Download</button>
+				<p>Press "Sync Now" to send your marking to the database. Press "Force Download" to force your device to download the latest version of the database. WARNING: This will override any recent changes you have made locally.</p>
+				<script>
+					function onSyncroniseClick(){
+					document.getElementById("syncing").innerHTML="Hello World";}
+					<!--STILL WORKING ON THIS BIT-->
+				</script>
+			</div>
+		</div><!-- /page one -->
+	</body>
+	
+</html>
