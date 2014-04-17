@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="js/jQuery/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>		
 		<script type="text/javascript" src="js/fastclick.js"></script>	
-		<script src="js/preferences.js"></script>
+		<script type="text/javascript" src="js/preferences.js"></script>	
 	</head> 
 
 	<body> 
@@ -61,16 +61,57 @@
 
 			function myFileCallback(event){
 				console.log(event);
+				console.log("Called myFileCallback!");
 			}
 			
 			function onFileSystemAquisition(fs){
-				console.log("File system aquired!");
-				fileSystem = fs;
+				fileSystem = fs;			
 				preferences = new Preferences("config.cfg", fileSystem);
 				preferences.write("foo", "bar");
 				preferences.save(myFileCallback);
 				//preferences.load(myFileCallback);
 			}
+
+			/*function gotFileEntry(fileEntry) {
+				console.log("Got fileentry!");
+				fileEntry.createWriter(gotFileWriter, fail);
+			}
+			
+			function gotFS1(fileSystem) {
+				fileSystem.root.getFile("readme.txt", null, gotFileEntry1, fail);
+			}
+
+			function gotFileEntry1(fileEntry) {
+				fileEntry.file(gotFile1, fail);
+			}
+
+			function gotFile1(file){
+				readDataUrl(file);
+				readAsText(file);
+			}
+
+			function readDataUrl(file) {
+				var reader = new FileReader();
+				reader.onloadend = function(evt) {
+					console.log("Read as data URL");
+					console.log(evt.target.result);
+				};
+				reader.readAsDataURL(file);
+			}
+
+			function readAsText(file) {
+				var reader = new FileReader();
+				reader.onloadend = function(evt) {
+					console.log("Read as text");
+					console.log(evt.target.result);
+				};
+				reader.readAsText(file);
+			}
+
+			function fail(error) {
+				console.log("ERRAH!");
+				console.log(error.code);
+			}*/
 			
 			function onError(evt) {
 				console.log(evt.target.error.code);
