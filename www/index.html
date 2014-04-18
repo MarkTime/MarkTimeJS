@@ -37,19 +37,11 @@
 				
 			</div>						
 		</div>
-<<<<<<< HEAD
 	
 		<!-- JavaScript Starting Point -->
 		<script src="js/index.js"></script>
 		<script src="js/preferences.js"></script>
 		<script type="text/javascript">			
-			var app = {
-				bindEvents: function() {
-					document.addEventListener('deviceready', this.onDeviceReady, false);
-				},
-=======
-				
-		<script type="text/javascript">
 		
 			var database;
 			var fileSystem;
@@ -69,15 +61,11 @@
 			function onDeviceReady() { //Gets called when the deviceready event gets fired by Cordova				
 				initialize();
 			}
-<<<<<<< HEAD
-=======
->>>>>>> 6ba97d36e932e508eafc179dafefe0602597d360
 
 			function myFileCallback(event){
 				console.log(event);
 				console.log("Called myFileCallback!");
 			}
->>>>>>> dbb692e3cd7cc08358a7774950f52f8fa8206f24
 			
 			function onFileSystemAquisition(fs){
 				fileSystem = fs;			

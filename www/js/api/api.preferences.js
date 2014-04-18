@@ -17,7 +17,7 @@ if (!API.has("Preferences")) {
          *
          * @returns bool If the plugin exists.
          */
-        this.exists = function() { return exists; }
+        this.exists = function() { return exists; };
         
         /**
          * Request access to the group
@@ -33,7 +33,7 @@ if (!API.has("Preferences")) {
             }
             access = true;
             return true;
-        }
+        };
         
         /**
          * Get a key from the preferences
@@ -53,7 +53,7 @@ if (!API.has("Preferences")) {
             response(v);
             
             return v;
-        }
+        };
         
         /**
          * Set a key from the preferences
@@ -74,7 +74,7 @@ if (!API.has("Preferences")) {
             response(v);
             
             return v;
-        }
+        };
         
         /**
          * Gets a key from the preferences
@@ -89,7 +89,7 @@ if (!API.has("Preferences")) {
         this.cache = function(key, value) {
             if (this.exists(key)) return this.get(key);
             else return this.set(key, value);
-        }
+        };
         
         /**
          * Finds if a key exists
@@ -109,7 +109,7 @@ if (!API.has("Preferences")) {
                 v = false;
             }, group, key);
             response(v);
-        }
+        };
         
         /**
          * The function to be called when an error occurs
@@ -120,23 +120,23 @@ if (!API.has("Preferences")) {
          */
         this.onError = function(error) {
             throw "Failed to access preferences: " + error;
-        }
+        };
         
         function doesExist() {
             var r = undefined;
             prefs.fetch(function(val) {
-                this.exists = function() { return true; }
+                this.exists = function() { return true; };
                 creator = val;
             }, function() {
-                this.exists = function() { return false; }
+                this.exists = function() { return false; };
             }, group, "__perms");
-        }
+        };
         
         function verify() {
             if (access) this.onError("Access denied");
-        }
+        };
         function response(v) {
             if (v === undefined) throw "appPreferences failed to respond in time";
-        }
+        };
     });
 }
