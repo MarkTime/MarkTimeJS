@@ -28,23 +28,4 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-<<<<<<< HEAD
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="AppPreferences">
-        <param name="android-package" value="me.apla.cordova.AppPreferences" />
-    </feature>
-    <name>MarkTime</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
-    </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
-=======
->>>>>>> dbb692e3cd7cc08358a7774950f52f8fa8206f24
 </widget>
