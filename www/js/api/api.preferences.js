@@ -8,16 +8,9 @@
 if (!API) Core.InitializeAPI();
 
 if (!API.has("Preferences")) {
-    API.add("Preferences", function(plugin, group) {
-        var prefs = plugins.appPreferences, creator = null, access = false;
+    API.add("Preferences", function(group) {
+        var prefs = plugins.appPreferences, creator = null, access = false, plugin = this;
         doesExist();
-        
-        /**
-         * Finds if the plugin exists
-         *
-         * @returns bool If the plugin exists.
-         */
-        this.exists = function() { return exists; }
         
         /**
          * Request access to the group
@@ -25,11 +18,11 @@ if (!API.has("Preferences")) {
          * @returns bool If access is accepted.
          */
         this.request = function() {
-            if (creator && creator !== plugin.toLowerCase()) return false;
+            if (creator && creator !== plugin.name.toLowerCase()) return false;
             else if (!creator) {
                 prefs.store(function(val) {
                     this.creator = val;
-                }, this.onError, group, "__perms", plugin.toLowerCase());
+                }, this.onError, group, "__perms", plugin.name.toLowerCase());
             }
             access = true;
             return true;
