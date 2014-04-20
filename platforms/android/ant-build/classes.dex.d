@@ -6,6 +6,11 @@ C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\
 C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$string.class \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$xml.class \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R.class \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$1.class \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$2.class \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$3.class \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$4.class \
+C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences.class \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\ContentFilesystem.class \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\DirectoryManager.class \
 C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\EncodingException.class \
