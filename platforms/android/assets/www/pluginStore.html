@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>MarkTimeJS</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="css/jQuery/jquery.mobile-1.1.0-rc.2.min.css" />
+		<script src="js/jQuery/jquery-1.7.1.min.js"></script>
+		<script src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>
+	</head> 
+
+	<body> 
+
+		<div data-role="page" id="body">
+			<!-- Header -->
+			<div data-role="header">
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="arrow-l">Back</a>
+				<h1>Plug-in Store</h1>
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="home">Home</a>
+			</div>
+
+			<!-- Body -->
+			<div data-role="content" >
+				<p id="message">Plug-ins developed by us are displayed at the top, these plug ins are not guaranteed not to be malicious. The plug-ins displayed under "Third Party Verified" have been checked by us to ensure they are not malicious, however we cannot guaranty it. The plug-ins displayed under "Third Party Unverified" have NOT BEEN CHECK BY US, we highly recommend that if you are not the developer of the plug-in that you do not install any plug-ins under this heading. These will in time be check by us and moved to the "Third Party Verified" section if they are deemed to be non-malicious.
+				<button class="ui-btn ui-btn-inline" onMouseClick="closeMessage()">Close</button>
+				<script>
+					$(document).ready(function(){
+					$("button").click(function(){
+					$("#message").remove();
+					});
+					});
+				</script>
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">Plug-ins</li>
+					<li><a href="#" data-transition="slide">Example Plug-in</a></li>
+					<li data-role="list-divider">3rd Party Verified Plug-ins</li>
+					<li><a href="#" data-transition="slide">Example Plug-in</a></li>
+					<li data-role="list-divider">3rd Party Unverified Plug-ins</li>
+					<li><a href="#" data-transition="slide">Example Plug-in</a></li>
+				</ul>	
+			</div>	
+		</div>
+	</body>
+</html>
