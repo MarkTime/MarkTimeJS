@@ -27,8 +27,8 @@
         }
 
         if (plugin.name === "MarkTime") {
-            this.triggerPlugin = function (plugin: string, ...parameters: string[]): void {
-                return triggerFill(plugin.toLowerCase(), parameters);
+            this.triggerPlugin = function (plugin: Plugins.Plugin, ...parameters: string[]): void {
+                return triggerFill(plugin.name.toLowerCase(), parameters);
             }
         }
 

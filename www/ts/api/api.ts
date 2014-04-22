@@ -1,6 +1,7 @@
 ﻿/// <reference path="api.events.ts" />
 /// <reference path="api.preferences.ts" />
 /// <reference path="api.file.ts" />
+/// <reference path="api.configuration.ts" />
 
 module API {
     var apis: Object = {}, plugins: Object = {};

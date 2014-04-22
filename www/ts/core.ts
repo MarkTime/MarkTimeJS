@@ -16,7 +16,7 @@ module Core {
      * Compares two version strings (formatted like "x.x.x")
      * Converted to TypeScript from http://stackoverflow.com/questions/6832596/how-to-compare-software-version-number-using-js-only-number
      */
-    export function versionCompare(v1: string, v2: string, options: any): number {
+    export function versionCompare(v1: string, v2: string, options: any = {}): number {
         var lexicographical: boolean = options && options.lexicographical, zeroExtend: boolean = options && options.zeroExtend, v1parts: any[] = v1.split('.'), v2parts: any[] = v2.split('.');
 
         function isValidPart(x: string) {

@@ -5,23 +5,10 @@
 
         initialize();
 
-        this.request = function (): boolean {
-            if (creator && creator !== plugin.name.toLowerCase()) return false;
-            else if (!creator) {
-                var done: boolean = false;
-                prefs.store(function (val): void {
-                    creator = val;
-                }, this.onError, group, permsKey, plugin.name.toLowerCase());
-
-                while (!done && !error) { }
-                error = false;
-            }
-            access = true;
-            return true;
-        }
+        this.name = group;
+        group = plugin.name + "." + group;
 
         this.get = function (key: string): string {
-            if (verify()) return;
             if (key.toLowerCase() === permsKey) {
                 this.onError("Access denied");
                 return;
@@ -39,7 +26,6 @@
         }
 
         this.set = function (key: string, value: string): string {
-            if (verify()) return;
             if (key.toLowerCase() == permsKey) {
                 this.onError("Access denied");
                 return;
@@ -56,7 +42,7 @@
             return v;
         }
 
-        this.cache = function (key: string, value: string): string {
+        this.default = function (key: string, value: string): string {
             if (this.exists(key)) return this.get(key);
             else return this.set(key, value);
         }
@@ -74,7 +60,7 @@
 
             while (typeof v === 'undefined' && !error) { }
             error = false;
-            //response(v);
+
             return v;
         }
 
@@ -86,7 +72,6 @@
             var complete: boolean = false;
             prefs.fetch(function (val: string): void {
                 exists = true;
-                creator = val;
                 complete = true;
             }, function (): void {
                 exists = false;
@@ -95,14 +80,6 @@
 
             while (!complete && !error) { }
             error = false;
-        }
-
-        function verify(): boolean {
-            if (!access) {
-                this.onError("Access denied");
-                return true;
-            }
-            return false;
         }
     });
 } ());

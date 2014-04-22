@@ -8,32 +8,35 @@
 if (!API) Core.InitializeAPI();
 
 if (!API.has("Preferences")) {
-    API.add("Preferences", function(plugin, group) {
-        var prefs = plugins.appPreferences, creator = null, access = false;
+    API.add("Preferences", function(group) {
+        var prefs = plugins.appPreferences, creator = null, access = false, plugin = this;
         doesExist();
         
         /**
+<<<<<<< HEAD
+=======
          * Finds if the plugin exists
          *
          * @returns bool If the plugin exists.
          */
-        this.exists = function() { return exists; }
+        this.exists = function() { return exists; };
         
         /**
+>>>>>>> 321ae7553d7b06fdb3f2a97e58409237980de9b6
          * Request access to the group
          *
          * @returns bool If access is accepted.
          */
         this.request = function() {
-            if (creator && creator !== plugin.toLowerCase()) return false;
+            if (creator && creator !== plugin.name.toLowerCase()) return false;
             else if (!creator) {
                 prefs.store(function(val) {
                     this.creator = val;
-                }, this.onError, group, "__perms", plugin.toLowerCase());
+                }, this.onError, group, "__perms", plugin.name.toLowerCase());
             }
             access = true;
             return true;
-        }
+        };
         
         /**
          * Get a key from the preferences
@@ -53,7 +56,7 @@ if (!API.has("Preferences")) {
             response(v);
             
             return v;
-        }
+        };
         
         /**
          * Set a key from the preferences
@@ -74,7 +77,7 @@ if (!API.has("Preferences")) {
             response(v);
             
             return v;
-        }
+        };
         
         /**
          * Gets a key from the preferences
@@ -89,7 +92,7 @@ if (!API.has("Preferences")) {
         this.cache = function(key, value) {
             if (this.exists(key)) return this.get(key);
             else return this.set(key, value);
-        }
+        };
         
         /**
          * Finds if a key exists
@@ -109,7 +112,7 @@ if (!API.has("Preferences")) {
                 v = false;
             }, group, key);
             response(v);
-        }
+        };
         
         /**
          * The function to be called when an error occurs
@@ -120,23 +123,23 @@ if (!API.has("Preferences")) {
          */
         this.onError = function(error) {
             throw "Failed to access preferences: " + error;
-        }
+        };
         
         function doesExist() {
             var r = undefined;
             prefs.fetch(function(val) {
-                this.exists = function() { return true; }
+                this.exists = function() { return true; };
                 creator = val;
             }, function() {
-                this.exists = function() { return false; }
+                this.exists = function() { return false; };
             }, group, "__perms");
-        }
+        };
         
         function verify() {
             if (access) this.onError("Access denied");
-        }
+        };
         function response(v) {
             if (v === undefined) throw "appPreferences failed to respond in time";
-        }
+        };
     });
 }
