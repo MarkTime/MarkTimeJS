@@ -1,57 +1,66 @@
-/**
- * Preferences API
- *
- * @author John Board johnrobboard@gmail.com
- * @version 1.0
- */
+﻿/// <reference path="api.events.ts" />
+/// <reference path="api.preferences.ts" />
+/// <reference path="api.file.ts" />
+var API;
+(function (API) {
+    var apis = {}, plugins = {};
 
-/**
- * Constructor, instantiates all the variables, etc
- * 
- * @param object parent The instantiating object 
- */
-function API(parent){
-	this.parent = parent;
-	this.apis = {};
-}
+    function add(name, api) {
+        name = name.toLowerCase();
+        if (apis.hasOwnProperty(name) || name === "marktime")
+            throw new Error("An API with the specified name already exists (name was " + name + ")");
+        apis[name] = api;
+    }
+    API.add = add;
 
-/**
- * Adds/Registers an API
- * 
- * @param string name Name of the API to add
- * @param function constructor The constructor the API to add 
- */
-API.prototype.add = function(name, constructor){
-	this.apis[name] = constructor;
-};
+    function has(name) {
+        return apis.hasOwnProperty(name);
+    }
+    API.has = has;
 
-/**
- * Checks to see whether an API exists
- * 
- * @param string name The name of the API to check
- * @returns boolean Whether the API exists
- */
-API.prototype.has = function(name){
-	return name in this.apis;
-};
+    function get(name) {
+        var parameters = [];
+        for (var _i = 0; _i < (arguments.length - 1); _i++) {
+            parameters[_i] = arguments[_i + 1];
+        }
+        return getAPI(name, parameters, new Plugins.Plugin("MarkTime"));
+    }
+    API.get = get;
 
-/**
- * Returns a new object of the specified API 
- * 
- * @param string name The name of the API to get
- * @param array parameters The parameters to pass to the API
- * 
- * @return object Returns a new instance of the API
- */
-API.prototype.get = function(name, parameters){
-	
-};
+    function getPlugin(plugin) {
+        var p = plugins[plugin.name.toLowerCase()];
+        return p.apply(p);
+    }
+    API.getPlugin = getPlugin;
 
-/**
- * Gets the class instantiator
- * 
- * @return object The class instantiator 
- */
-API.prototype.getParent = function (){
-	return this.parent;
-};
+    function pluginContext(plugin) {
+        return {
+            "has": this.has,
+            "get": function (name) {
+                var parameters = [];
+                for (var _i = 0; _i < (arguments.length - 1); _i++) {
+                    parameters[_i] = arguments[_i + 1];
+                }
+                return getAPI(name, parameters, plugin);
+            },
+            "plugin": function (f) {
+                if (typeof f !== "function")
+                    throw new Error("API.plugin() expects a function, not a " + typeof f);
+                if (apis.hasOwnProperty(plugin.name.toLowerCase()))
+                    throw new Error("A plugin with the specified name already exists (name was " + plugin.name + ")");
+                apis[plugin.name.toLowerCase()] = f;
+            }
+        };
+    }
+    API.pluginContext = pluginContext;
+
+    function getAPI(name, parameters, plugin) {
+        name = name.toLowerCase();
+        if (!apis.hasOwnProperty(name)) {
+            Core.include("js/api/api." + name.toLowerCase() + ".js", undefined, function () {
+                throw new Error("An API with the specified name could not be found (name was " + name + ")");
+            });
+        }
+        return apis[name].apply(plugin, parameters);
+    }
+})(API || (API = {}));

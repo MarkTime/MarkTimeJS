@@ -1,30 +1,44 @@
-/**
- * Core manager for plugins
- *
- * @author Tom Barham me@mrfishie.com
- * @version 0.1
- * @namespace Plugins
- */
-
-// Initialize plugins object for future use (in other documents too)
-var Plugins = {}, API = {};
-
-(function(p) {
-    var pref = new API.get("Preferences", "Plugins");
+﻿var Plugins;
+(function (Plugins) {
+    var pref = API.get("Preferences", "Plugins");
     var pluginPath = pref.cache("plugin_folder", "/marktime/plugins/");
-    
-    p.getPlugin = function(name) {
+
+    function getPlugin(name) {
         return new Plugin(name);
     }
-    
-    /**
-     * Class for a plugin
-     *
-     * @author Tom Barham me@mrfishie.com
-     * @version 0.1
-     * @namespace Plugins
-     */
-    function Plugin(name) {
-        var path = pluginPath + encodeURI(name);
+    Plugins.getPlugin = getPlugin;
+
+    var pluginProperties = {
+        "name": "Generic Plugin",
+        "version": "1.0.0",
+        "description": "<em>No Description</em>",
+        "authors": [],
+        "dependencies": {},
+        "files": {}
+    };
+    var Plugin = (function () {
+        function Plugin(name) {
+            this.path = pluginPath + encodeURIComponent(name) + "/";
+            this.name = name;
+
+            var path = this.path + "/plugin.js";
+            var content = API.get("File").read(path);
+            sandboxer(content, API.pluginContext(this));
+            this.plugin = API.getPlugin(this);
+
+            if (!this.plugin.hasOwnProperty("properties"))
+                throw new Error("The plugin " + name + " is invalid (contains no 'properties' field)");
+            var propertyName;
+            for (propertyName in pluginProperties) {
+                this[propertyName] = this.plugin["properties"][propertyName] || pluginProperties[propertyName];
+            }
+            // TODO
+        }
+        return Plugin;
+    })();
+    Plugins.Plugin = Plugin;
+
+    function sandboxer(__code, API) {
+        eval(__code);
     }
-}(Plugins));
+})(Plugins || (Plugins = {}));
