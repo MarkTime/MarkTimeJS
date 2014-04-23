@@ -1,6 +1,5 @@
 ﻿var API;
 (function (API) {
-    console.log("Loading!");
     var apis = {}, plugins = {};
 
     function add(name, api) {
@@ -20,6 +19,26 @@
         return apis.hasOwnProperty(name);
     }
     API.has = has;
+    
+    /**
+     * This function returns a list of all registered APIs
+     * @return array List of all registered APIs  
+     */
+    function getAPINames(){
+        var keys = [];
+        for(var k in apis) keys.push(k);
+        return keys;
+    }
+    API.getAPINames = getAPINames;
+    
+    /**
+     * This function returns all registered apis
+     * @return object All registered apis   
+     */
+    function getAPIs(){
+        return apis;
+    }
+    API.getAPIs = getAPIs;
     
     /**
      * Little debugging function John added

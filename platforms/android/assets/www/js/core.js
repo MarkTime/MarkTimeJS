@@ -23,7 +23,8 @@ var Core;
 		
 		this.initializePlugins();		
 		
-		initialized = true;
+		initialized = true;		
+		
 	}
 	Core.initialize = initialize;
 
@@ -33,8 +34,8 @@ var Core;
     function includeFiles(){
         var apisToLoad = ["js/api.js"]; 
         
-        Utils.include(apisToLoad, function(data){                           //Callback if everything is fine!
-            API.respond();
+        Utils.include(apisToLoad, function(data){                           //Callback if everything is fine!            
+            //console.log(API.get("Preferences", "MarkTimeJS"));            
         }, function (status, error, file){                                  //Callback if errored.
             console.log("Unable to load: "+ file + "("+error+")");
         });
@@ -48,10 +49,11 @@ var Core;
 	 * Used to initialize all the builtin APIs
 	 */
 	function initializeBuiltinAPIs(){
-		var apisToLoad = ["js/apis/file.js", "thingo", "js/apis/preferences.js", "js/apis/configuration.js"]; 
+		var apisToLoad = ["js/apis/preferences.js"]; 
         
         Utils.include(apisToLoad, function(data){                           //Callback if everything is fine!
-            console.log("Finished loading file.");
+            //console.log("Finished loading file.");
+            console.log(API.getAPINames());
         }, function (status, error, file){                                  //Callback if errored.
             console.log("Unable to load: "+ file + "("+error+")");
         });
