@@ -18,6 +18,11 @@ var API;
         return apis.hasOwnProperty(name);
     }
     API.has = has;
+    
+    function respond(){
+    	console.log("API class responding!");
+    }
+    API.respond = respond;
 
     function get(name) {
         var parameters = [];

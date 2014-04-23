@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/jQuery/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/jQuery/jquery.mobile-1.1.0-rc.2.min.js"></script>		
-		<script type="text/javascript" src="js/fastclick.js"></script>	
+		<script type="text/javascript" src="js/fastclick.js"></script>			
 	</head> 
 
 	<body> 
@@ -39,43 +39,20 @@
 		</div>
 	
 		<!-- JavaScript Starting Point -->
-		<script type="text/javascript">			
+		<script type="text/javascript" src="js/api/api.js"></script>	
+		<script type="text/javascript" src="js/core.js"></script>			
+		<script type="text/javascript">	
 		
-			var database;
-			var fileSystem;
-			var preferences;
-		
-			function initialize(){
-				FastClick.attach(document.body);
-				window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemAquisition, onError); //Requests the filesystem				
-			}					
-		
-			function bindEvents(){
-				document.addEventListener('deviceready', this.onDeviceReady, false);
+			/**
+			This gets called when the deviceready event gets queued by Cordova
+			*/
+			function onDeviceReady(){
+				console.log("Device ready!");
+				Core.initialize();
 			}
 			
-			/* ========== EVENTS ========== */
-			
-			function onDeviceReady() { //Gets called when the deviceready event gets fired by Cordova				
-				initialize();
-			}
-
-			function myFileCallback(event){
-				console.log(event);
-				console.log("Called myFileCallback!");
-			}
-			
-			function onFileSystemAquisition(fs){
-				fileSystem = fs;			
-			}
-			
-			function onError(evt) {
-				console.log(evt.target.error.code);
-			}
-			
-			<!-- Start the wheels rolling... -->
-			
-			bindEvents(); //This is run when the page is loaded
+			//Bind the initializing event
+			document.addEventListener('deviceready', onDeviceReady, false);			
 			
 		</script>
 	</body>
