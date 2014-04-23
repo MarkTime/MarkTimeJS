@@ -1,9 +1,6 @@
-﻿/// <reference path="api.events.ts" />
-/// <reference path="api.preferences.ts" />
-/// <reference path="api.file.ts" />
-/// <reference path="api.configuration.ts" />
-var API;
+﻿var API;
 (function (API) {
+    console.log("Loading!");
     var apis = {}, plugins = {};
 
     function add(name, api) {

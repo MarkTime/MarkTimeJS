@@ -16,7 +16,9 @@ var Utils;
             for(file in files){
                 $.ajax({
                     url: files[file],
-                    success: executeCallback(files[file]),
+                    success: function(data){
+                        executeCallback(data);
+                    },
                     error: function (xhr, status, error) {
                         errorCallback(status, error, files[file], xhr);
                     }
@@ -26,8 +28,8 @@ var Utils;
             file = files;
             $.ajax({
                 url: file,
-                success: function(){
-                    executeCallback(file);
+                success: function(data){
+                    executeCallback(data);
                 },
                 error: function (xhr, status, error) {
                     error(status, error, file, xhr);

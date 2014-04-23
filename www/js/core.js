@@ -20,6 +20,7 @@ var Core;
 		
 		this.initializeBuiltinAPIs();
 		console.log("Initialized all APIs!");
+		
 		this.initializePlugins();		
 		
 		initialized = true;
@@ -32,11 +33,14 @@ var Core;
     function includeFiles(){
         var apisToLoad = ["js/api.js"]; 
         
-        Utils.include(apisToLoad, function(file){                           //Callback if everything is fine!
-            console.log("Finished loading: "+file);
+        Utils.include(apisToLoad, function(data){                           //Callback if everything is fine!
+            API.respond();
         }, function (status, error, file){                                  //Callback if errored.
             console.log("Unable to load: "+ file + "("+error+")");
         });
+        
+        //var prefs = API.get("Preferences", "MarkTime");
+        //console.log(prefs);
     }
     Core.includeFiles = includeFiles;
 
@@ -46,8 +50,8 @@ var Core;
 	function initializeBuiltinAPIs(){
 		var apisToLoad = ["js/apis/file.js", "thingo", "js/apis/preferences.js", "js/apis/configuration.js"]; 
         
-        Utils.include(apisToLoad, function(file){                           //Callback if everything is fine!
-            console.log("Finished loading: "+file);
+        Utils.include(apisToLoad, function(data){                           //Callback if everything is fine!
+            console.log("Finished loading file.");
         }, function (status, error, file){                                  //Callback if errored.
             console.log("Unable to load: "+ file + "("+error+")");
         });
