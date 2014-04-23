@@ -14,16 +14,30 @@ var API;
     }
     API.add = add;
 
+    /**
+     * Checks whether an API exists
+     * @param string name Name of the API
+     * @return boolean Whether the API exists
+     */
     function has(name) {
         return apis.hasOwnProperty(name);
     }
     API.has = has;
     
+    /**
+     * Little debugging function John added
+     * He used it call to see if he correctly included the api.js file 
+     */
     function respond(){
     	console.log("I'm here!");
     }
     API.respond = respond;
 
+    /**
+     * Gets an instance of an API 
+     * @param string name Name of the API to get
+     * @return object instance of the requested API
+     */
     function get(name) {
         var parameters = [];
         for (var _i = 0; _i < (arguments.length - 1); _i++) {
@@ -63,7 +77,7 @@ var API;
     function getAPI(name, parameters, plugin) {
         name = name.toLowerCase();
         if (!apis.hasOwnProperty(name)) {
-            Core.include("js/api/api." + name.toLowerCase() + ".js", undefined, function () {
+            Core.include("js/api/" + name.toLowerCase() + ".js", undefined, function () {
                 throw new Error("An API with the specified name could not be found (name was " + name + ")");
             });
         }

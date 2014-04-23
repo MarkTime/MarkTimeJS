@@ -13,15 +13,23 @@ var Core;
 	 * @requires "deviceready" event to have been fired
 	 */
 	function initialize(){
-		console.log("Core initializing!");
 		FastClick.attach(document.body);	
 			
+		this.includeFiles();
 		this.initializeBuiltinAPIs();
 		this.initializePlugins();		
 		
 		initialized = true;
 	}
 	Core.initialize = initialize;
+
+    /**
+     * Includes files such as api.js and plugins.js 
+     */
+    function includeFiles(){        
+        Utils.include("js/api.js", function(){console.log("Finished loading files!");}, function (){console.log("Errah!");});
+    }
+    Core.includeFiles = includeFiles;
 
 	/**
 	 * Used to initialize all the builtin APIs

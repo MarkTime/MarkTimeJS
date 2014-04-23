@@ -8,7 +8,8 @@ var Utils;
 	 * @param execute function Callback to call when the files have been loaded
 	 * @param error function Callback to call if an error occurs
 	 */
-    function include(files, execute, error) {
+	//TODO: Implement multi-file loading, rather than just a single file
+    function include(file, execute, error) {
         if (typeof execute === "undefined") { execute = defaultExecute; }
         if (typeof error === "undefined") { error = defaultError; }
         $.ajax({
