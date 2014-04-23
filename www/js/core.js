@@ -16,7 +16,10 @@ var Core;
 		FastClick.attach(document.body);	
 			
 		this.includeFiles();
+		console.log("Included all files!");
+		
 		this.initializeBuiltinAPIs();
+		console.log("Initialized all APIs!");
 		this.initializePlugins();		
 		
 		initialized = true;
@@ -26,8 +29,14 @@ var Core;
     /**
      * Includes files such as api.js and plugins.js 
      */
-    function includeFiles(){        
-        Utils.include("js/api.js", function(){console.log("Finished loading files!");}, function (){console.log("Errah!");});
+    function includeFiles(){
+        var apisToLoad = ["js/api.js"]; 
+        
+        Utils.include(apisToLoad, function(file){                           //Callback if everything is fine!
+            console.log("Finished loading: "+file);
+        }, function (status, error, file){                                  //Callback if errored.
+            console.log("Unable to load: "+ file + "("+error+")");
+        });
     }
     Core.includeFiles = includeFiles;
 
@@ -35,7 +44,13 @@ var Core;
 	 * Used to initialize all the builtin APIs
 	 */
 	function initializeBuiltinAPIs(){
-		
+		var apisToLoad = ["js/apis/file.js", "thingo", "js/apis/preferences.js", "js/apis/configuration.js"]; 
+        
+        Utils.include(apisToLoad, function(file){                           //Callback if everything is fine!
+            console.log("Finished loading: "+file);
+        }, function (status, error, file){                                  //Callback if errored.
+            console.log("Unable to load: "+ file + "("+error+")");
+        });
 	}
 	Core.initializeBuiltinAPIs = initializeBuiltinAPIs;
 	

@@ -9,16 +9,31 @@ var Utils;
 	 * @param error function Callback to call if an error occurs
 	 */
 	//TODO: Implement multi-file loading, rather than just a single file
-    function include(file, execute, error) {
-        if (typeof execute === "undefined") { execute = defaultExecute; }
-        if (typeof error === "undefined") { error = defaultError; }
-        $.ajax({
-            url: file,
-            success: execute,
-            error: function (xhr, status, error) {
-                error(status, error, file, xhr);
+    function include(files, executeCallback, errorCallback) {
+        if (typeof executeCallback === "undefined") { executeCallback = defaultExecute; }
+        if (typeof errorCallback === "undefined") { errorCallback = defaultError; }
+        if (typeof files == "object"){ //If an array is passed, iterate over, and load all the files            
+            for(file in files){
+                $.ajax({
+                    url: files[file],
+                    success: executeCallback(files[file]),
+                    error: function (xhr, status, error) {
+                        errorCallback(status, error, files[file], xhr);
+                    }
+                });  
             }
-        });
+        } else if (typeof files == "string"){ //If a single string is passed, load that file only
+            file = files;
+            $.ajax({
+                url: file,
+                success: function(){
+                    executeCallback(file);
+                },
+                error: function (xhr, status, error) {
+                    error(status, error, file, xhr);
+                }
+            }); 
+        }        
     }
     Utils.include = include;
 
