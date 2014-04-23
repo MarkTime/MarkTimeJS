@@ -27,7 +27,7 @@ var Core;
 	 * Used to initialize all the builtin APIs
 	 */
 	function initializeBuiltinAPIs(){
-		API.respond();
+		
 	}
 	Core.initializeBuiltinAPIs = initializeBuiltinAPIs;
 	

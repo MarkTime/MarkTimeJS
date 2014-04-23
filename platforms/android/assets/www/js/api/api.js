@@ -20,7 +20,7 @@ var API;
     API.has = has;
     
     function respond(){
-    	console.log("API class responding!");
+    	console.log("I'm here!");
     }
     API.respond = respond;
 

@@ -38,10 +38,13 @@
 			</div>						
 		</div>
 	
-		<!-- JavaScript Starting Point -->
-		<script type="text/javascript" src="js/api/api.js"></script>	
-		<script type="text/javascript" src="js/core.js"></script>			
+		<!-- JavaScript Starting Point -->	
+		<script type="text/javascript" src="js/core.js"></script>
+		<script type="text/javascript" src="js/utils.js"></script>
+		<!-- <script type="text/javascript" src="js/api/api.js"></script> -->			
 		<script type="text/javascript">	
+							
+			Utils.include("js/api/api.js", function(){API.respond();}, function(){console.log("Errored!");});
 		
 			/**
 			This gets called when the deviceready event gets queued by Cordova
