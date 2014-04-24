@@ -5,9 +5,12 @@
         var plugin = this, namespace = (plugin.name === "MarkTime") ? "" : (plugin.name + ".");
         if (!events.hasOwnProperty(event))
             events[event] = [];
-
-        this.subscribe = function (callback) {
+        
+        var Events = {};
+        Events.subscribe = function (callback) {            
             var pname = plugin.name.toLowerCase();
+            console.log("Subscribing " + pname + " to event " + event);
+            
             if (!events.hasOwnProperty(pname))
                 events[pname] = {};
             if (!events[pname].hasOwnProperty(event))
@@ -15,13 +18,17 @@
 
             events[pname][event].push(callback);
         };
-        this.unsubscribe = function (callback) {
-            var eventlist = events[event];
+        Events.unsubscribe = function (callback) {
+            console.log("Unsubscribing " + pname + " from event " + event);
+            
+            var eventlist = events[plugin.name.toLowerCase()][event];
             var index = eventlist.indexOf(callback);
             if (index > -1)
                 eventlist.splice(index, 1);
         };
-        this.trigger = function () {
+        Events.trigger = function () {
+            console.log("Triggering event " + event);
+            
             var parameters = [];
             for (var _i = 0; _i < (arguments.length - 0); _i++) {
                 parameters[_i] = arguments[_i + 0];
@@ -35,7 +42,9 @@
         };
 
         if (plugin.name === "MarkTime") {
-            this.triggerPlugin = function (plugin) {
+            Events.triggerPlugin = function (plugin) {
+                console.log("Triggering custom event for plugin " + plugin);
+                
                 var parameters = [];
                 for (var _i = 0; _i < (arguments.length - 1); _i++) {
                     parameters[_i] = arguments[_i + 1];
@@ -56,5 +65,7 @@
                 });
             }
         }
+        
+        return Events;
     });
 }());

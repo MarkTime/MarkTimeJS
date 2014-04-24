@@ -1,2 +1,2 @@
-C:\Development\android_workspace\MarkTimeJS\platforms\android\ant-build\AndroidManifest.xml : \
-C:\Development\android_workspace\MarkTimeJS\platforms\android\AndroidManifest.xml \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\AndroidManifest.xml : \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\AndroidManifest.xml \

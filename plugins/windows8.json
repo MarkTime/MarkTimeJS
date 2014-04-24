@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "me.apla.cordova.app-preferences": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.apache.cordova.file": {
+            "PACKAGE_NAME": "MarkTime"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -8,33 +8,25 @@ var Utils;
 	 * @param execute function Callback to call when the files have been loaded
 	 * @param error function Callback to call if an error occurs
 	 */
-    function include(files, executeCallback, errorCallback) {
-        if (typeof executeCallback === "undefined") { executeCallback = defaultExecute; }
+    function include(files, finishCallback, errorCallback) {
+        if (typeof finishCallback === "undefined") { finishCallback = function() { } }
         if (typeof errorCallback === "undefined") { errorCallback = defaultError; }
-        if (typeof files == "object"){ //If an array is passed, iterate over, and load all the files            
-            for(file in files){
-                $.ajax({
-                    url: files[file],
-                    success: function(data){
-                        executeCallback(data);
-                    },
-                    error: function (xhr, status, error) {
-                        errorCallback(status, error, files[file], xhr);
-                    }
-                });  
-            }
-        } else if (typeof files == "string"){ //If a single string is passed, load that file only
-            var file = files;
-            $.ajax({
-                url: file,
-                success: function(data, status, xhr){
-                    executeCallback(data, file);
-                },
-                error: function (xhr, status, error) {
-                    errorCallback(status, error, file, xhr);
-                }
-            }); 
-        }        
+		if (!Array.isArray(files)) files = [files];
+				
+		for(file in files){
+			console.log("Including file " + files[file]);
+			$.ajax({
+				url: files[file],
+				success: function(data){
+					console.log("Finished loading file " + files[file]);
+					finishCallback(data, files[file]);
+				},
+				error: function (xhr, status, error) {
+					console.log("Failed to load file " + files[file] + " because " + status + " " + error.stack);
+					errorCallback(status, error, files[file], xhr);
+				}
+			});  
+		}
     }
     Utils.include = include;
 
@@ -84,9 +76,6 @@ var Utils;
     }
     Utils.versionCompare = versionCompare;
 
-    function defaultExecute(content) {
-        $("<script></script>").appendTo("head").text(content);
-    }
     function defaultError(status, error, file) {
         status[0] = status[0].toUpperCase();
         throw new Error(status + " while including '" + file + "' " + error);

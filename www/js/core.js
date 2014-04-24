@@ -5,14 +5,16 @@
  */
 
 var Core;
-(function (Core) {
+(function (Core) {    
 	var initialized = false;
+    
+    Core.debug = true;
 	
 	/**
 	 * Function that initializes all the systems of the app
 	 * @requires "deviceready" event to have been fired
 	 */
-	function initialize(){
+	/*function initialize(){
 		FastClick.attach(document.body);	
 			
 		this.includeFiles();
@@ -25,12 +27,54 @@ var Core;
 		initialized = true;		
 		
 	}
-	Core.initialize = initialize;
+	Core.initialize = initialize;*/
+    
+    var files = [
+        "js/api.js",
+        "js/plugins.js"
+    ];
+    Core.files = files;
+    
+    /**
+     * TODO
+     * Show a loading symbol *until* after the `Plugins.initialize()` line. This is when everything is loaded.
+     */
+    function initialize(complete) {
+        console.log("== INITIALIZING MARKTIME ==");
+        FastClick.attach(document.body);
+        Utils.include("js/api.js", function() {
+            API.autoload(function() {
+                Utils.include("js/plugins.js", function() {
+                    console.log("== INITIALIZATION COMPLETE ==");
+                    initialized = true;
+                    if (complete) complete();
+                });
+            });
+        });
+        
+        initialized = true;
+    }
+    Core.initialize = initialize;
+    
+    /*function includeFiles(complete) {
+        var donecount = 0;
+        Utils.include(files, function() {
+            donecount++;
+            if (donecount >= files.length) {
+                complete();
+            }
+        });
+    }
+    Core.includeFiles = includeFiles;*/
+    
+    function isInitialized() {
+        return initialized;
+    }
 
     /**
      * Includes files such as api.js and plugins.js 
      */
-    function includeFiles(){
+    /*function includeFiles(){
         var filesToLoad = ["js/api.js",
                           "js/apis/preferences.js",
                           "js/apis/configuration.js", 
@@ -50,7 +94,7 @@ var Core;
         //var prefs = API.get("Preferences", "MarkTime");
         //console.log(prefs);
     }
-    Core.includeFiles = includeFiles;
+    Core.includeFiles = includeFiles;*/
 
 	/**
 	 * Used to initialize all the builtin APIs

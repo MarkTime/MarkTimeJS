@@ -1,9 +1,10 @@
 ﻿var API;
 (function (API) {
     var apis = {}, plugins = {};
-
+	
     function add(name, api) {
         name = name.toLowerCase();
+		console.log("Adding API " + name);
         if (apis.hasOwnProperty(name) || name === "marktime")
             throw new Error("An API with the specified name already exists (name was " + name + ")");
         apis[name] = api;
@@ -39,15 +40,6 @@
         return apis;
     }
     API.getAPIs = getAPIs;
-    
-    /**
-     * Little debugging function John added
-     * He used it call to see if he correctly included the api.js file 
-     */
-    function respond(){
-    	console.log("I'm here!");
-    }
-    API.respond = respond;
 
     /**
      * Gets an instance of an API 
@@ -58,18 +50,22 @@
         var parameters = [];
         for (var _i = 0; _i < (arguments.length - 1); _i++) {
             parameters[_i] = arguments[_i + 1];
-        } 
-        return getAPI(name, parameters, new Plugins.Plugin("MarkTime"));;
+        }
+		
+        return getAPI(name, parameters, Plugins.Default);
     }
     API.get = get;
 
     function getPlugin(plugin) {
+		console.log("Getting plugin " + plugin.name);
+		
         var p = plugins[plugin.name.toLowerCase()];
         return p.apply(p);
     }
     API.getPlugin = getPlugin;
 
     function pluginContext(plugin) {
+		console.log("Creating plugin context for " + plugin.name);
         return {
             "has": this.has,
             "get": function (name) {
@@ -80,6 +76,8 @@
                 return getAPI(name, parameters, plugin);
             },
             "plugin": function (f) {
+				console.log("Adding plugin " + plugin.name);
+				
                 if (typeof f !== "function")
                     throw new Error("API.plugin() expects a function, not a " + typeof f);
                 if (apis.hasOwnProperty(plugin.name.toLowerCase()))
@@ -89,14 +87,29 @@
         };
     }
     API.pluginContext = pluginContext;
+	
+	function autoload(complete) {
+		console.log("Autoloading APIs...");
+		Utils.include("js/apis/list.json", function(list) {
+			var loaded = 0;
+			for (var i = 0; i < list.length; i++) {
+				Utils.include("js/apis/" + list[i] + ".js", function() {
+					loaded++;
+					if (loaded >= list.length) {
+						console.log(list.length + " APIs were loaded.");
+						complete();
+					}
+				});
+			}
+		});
+	}
+	API.autoload = autoload;
 
     function getAPI(name, parameters, plugin) {
+		console.log("Getting API '" + name + "' as plugin '" + plugin.name + "' with " + parameters.length + " " + (parameters.length == 1 ? "parameter" : "parameters"));
+		
         name = name.toLowerCase();
-        if (!apis.hasOwnProperty(name)) {
-            Core.include("js/apis/" + name.toLowerCase() + ".js", undefined, function () {
-                throw new Error("An API with the specified name could not be found (name was " + name + ")");
-            });
-        }
+        if (!apis.hasOwnProperty(name)) throw new Error("An API with the specified name has not yet been loaded (name was " + name + ")");
         return apis[name].apply(plugin, parameters);
     }
 })(API || (API = {}));

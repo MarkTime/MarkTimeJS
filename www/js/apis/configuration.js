@@ -1,30 +1,37 @@
 ﻿(function () {
-    API.add("Configuration", function (dictionary) {
+    API.add("Configuration", function (dictionary) {        
         if (typeof dictionary === "undefined") { dictionary = "__config"; }
         var plugin = this, pref = API.get("Preferences", dictionary);
-
-        this.load = function (obj) {
-            var key, ret;
+        
+        var Configuration = {};
+        Configuration.load = function (obj) {
+            console.log("[Configuration] Loading config keys in dictionary " + plugin.name + "." + dictionary);
+            
+            var key, ret = {}, count = 0;
             for (key in obj) {
                 if (obj.hasOwnProperty(key)) {
-                    ret[key] = pref.cache(key, obj[key]);
+                    ret[key] = pref.default(key, obj[key]);
+                    count++;
                 }
             }
+            console.log("[Configuration] loaded " + count + " keys");
             return ret;
         };
 
-        this.get = function (key) {
+        Configuration.get = function (key) {
             return pref.get(key);
         };
 
-        this.set = function (key, value) {
+        Configuration.set = function (key, value) {
             return pref.set(key, value);
         };
 
-        this.default = function (key, value) {
+        Configuration.default = function (key, value) {
             return pref.default(key, value);
         };
 
-        this.preferences = pref;
+        Configuration.preferences = pref;
+        
+        return Configuration;
     });
 }());
