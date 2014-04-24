@@ -16,10 +16,9 @@ var Core;
 		FastClick.attach(document.body);	
 			
 		this.includeFiles();
-		console.log("Included all files!");
 		
-		this.initializeBuiltinAPIs();
-		console.log("Initialized all APIs!");
+		//this.initializeBuiltinAPIs();
+		//console.log("Initialized all APIs!"); //Replaced, everything added in this.includeFiles();
 		
 		this.initializePlugins();		
 		
@@ -32,13 +31,21 @@ var Core;
      * Includes files such as api.js and plugins.js 
      */
     function includeFiles(){
-        var apisToLoad = ["js/api.js"]; 
+        var filesToLoad = ["js/api.js",
+                          "js/apis/preferences.js",
+                          "js/apis/configuration.js", 
+                          "js/plugins.js"]; 
         
-        Utils.include(apisToLoad, function(data){                           //Callback if everything is fine!            
-            //console.log(API.get("Preferences", "MarkTimeJS"));            
-        }, function (status, error, file){                                  //Callback if errored.
-            console.log("Unable to load: "+ file + "("+error+")");
-        });
+        for(file in filesToLoad){
+            file = filesToLoad[file];
+            console.log("Getting file: "+file);
+            Utils.include(file, function(data, fileGotten){
+                console.log("Success loading: "+fileGotten);
+            }, function(status, error, file){
+                console.log("Unable to load: "+ file + " ("+error+")");
+            });
+        }
+        //setTimeout(function(){console.log(API.get("Preferences"));}, 1000);
         
         //var prefs = API.get("Preferences", "MarkTime");
         //console.log(prefs);
@@ -48,17 +55,16 @@ var Core;
 	/**
 	 * Used to initialize all the builtin APIs
 	 */
-	function initializeBuiltinAPIs(){
+	/*function initializeBuiltinAPIs(){
 		var apisToLoad = ["js/apis/preferences.js"]; 
         
         Utils.include(apisToLoad, function(data){                           //Callback if everything is fine!
-            //console.log("Finished loading file.");
-            console.log(API.getAPINames());
+            console.log(API.get("Preferences", "MarkTimeJS"));
         }, function (status, error, file){                                  //Callback if errored.
             console.log("Unable to load: "+ file + "("+error+")");
         });
 	}
-	Core.initializeBuiltinAPIs = initializeBuiltinAPIs;
+	Core.initializeBuiltinAPIs = initializeBuiltinAPIs;*/
 	
 	/**
 	 * Used to initalize the plugin system 

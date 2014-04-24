@@ -117,3 +117,4 @@
         eval(__code);
     }
 })(Plugins || (Plugins = {}));
+Plugins = {"Stuff": "a"};

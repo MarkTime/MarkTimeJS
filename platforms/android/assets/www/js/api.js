@@ -58,8 +58,8 @@
         var parameters = [];
         for (var _i = 0; _i < (arguments.length - 1); _i++) {
             parameters[_i] = arguments[_i + 1];
-        }
-        return getAPI(name, parameters, new Plugins.Plugin("MarkTime"));
+        } 
+        return getAPI(name, parameters, new Plugins.Plugin("MarkTime"));;
     }
     API.get = get;
 
@@ -93,7 +93,7 @@
     function getAPI(name, parameters, plugin) {
         name = name.toLowerCase();
         if (!apis.hasOwnProperty(name)) {
-            Core.include("js/api/" + name.toLowerCase() + ".js", undefined, function () {
+            Core.include("js/apis/" + name.toLowerCase() + ".js", undefined, function () {
                 throw new Error("An API with the specified name could not be found (name was " + name + ")");
             });
         }

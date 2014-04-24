@@ -8,7 +8,6 @@ var Utils;
 	 * @param execute function Callback to call when the files have been loaded
 	 * @param error function Callback to call if an error occurs
 	 */
-	//TODO: Implement multi-file loading, rather than just a single file
     function include(files, executeCallback, errorCallback) {
         if (typeof executeCallback === "undefined") { executeCallback = defaultExecute; }
         if (typeof errorCallback === "undefined") { errorCallback = defaultError; }
@@ -25,14 +24,14 @@ var Utils;
                 });  
             }
         } else if (typeof files == "string"){ //If a single string is passed, load that file only
-            file = files;
+            var file = files;
             $.ajax({
                 url: file,
-                success: function(data){
-                    executeCallback(data);
+                success: function(data, status, xhr){
+                    executeCallback(data, file);
                 },
                 error: function (xhr, status, error) {
-                    error(status, error, file, xhr);
+                    errorCallback(status, error, file, xhr);
                 }
             }); 
         }        
