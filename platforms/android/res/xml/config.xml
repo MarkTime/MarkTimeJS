@@ -4,13 +4,6 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="AppPreferences">
-        <param name="android-package" value="me.apla.cordova.AppPreferences" />
-    </feature>
     <name>MarkTime</name>
     <description>
         An app which helps with the administrivia of a Boy's Brigade company

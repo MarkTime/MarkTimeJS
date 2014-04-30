@@ -9,40 +9,26 @@ var Core;
 	var initialized = false;
     
     Core.debug = true;
-	
-	/**
-	 * Function that initializes all the systems of the app
-	 * @requires "deviceready" event to have been fired
-	 */
-	/*function initialize(){
-		FastClick.attach(document.body);	
-			
-		this.includeFiles();
-		
-		//this.initializeBuiltinAPIs();
-		//console.log("Initialized all APIs!"); //Replaced, everything added in this.includeFiles();
-		
-		this.initializePlugins();		
-		
-		initialized = true;		
-		
-	}
-	Core.initialize = initialize;*/
-    
-    var files = [
-        "js/api.js",
-        "js/plugins.js"
-    ];
-    Core.files = files;
     
     /**
-     * TODO
-     * Show a loading symbol *until* after the `Plugins.initialize()` line. This is when everything is loaded.
+     * Function that initializes all the systems of the app
+     * @requires "deviceready" event to have been fired
      */
     function initialize(complete) {
+        /**
+        * TODO
+        * Show a loading symbol *until* after the `Plugins.initialize()` line. This is when everything is loaded.
+        */
+		/*var DEBUGGING_MODE = true;
+		if (!DEBUGGING_MODE){
+			console.log = function(){};
+		}*/
+			
         console.log("== INITIALIZING MARKTIME ==");
+		
         FastClick.attach(document.body);
         Utils.include("js/api.js", function() {
+            setTimeout(function() {
             API.autoload(function() {
                 Utils.include("js/plugins.js", function() {
                     console.log("== INITIALIZATION COMPLETE ==");
@@ -50,7 +36,7 @@ var Core;
                     if (complete) complete();
                 });
             });
-        });
+        }); }, 1000);
         
         initialized = true;
     }
