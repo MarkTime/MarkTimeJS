@@ -2,14 +2,17 @@
 /// <reference path="plugins/plugins.ts" />
 var Utils;
 (function (Utils) {
+    
 	/** 
-	 * Loads a list of javascript files
+	 * ===== DEPRICATED! =====
+	 * Replaced with $.getJSON and $.getScript 
+	 * Loads a list of json files
 	 * @param array files Array of strings which are URLs of the javascript files to include
 	 * @param execute function Callback to call when the files have been loaded
 	 * @param error function Callback to call if an error occurs
 	 */
     function include(files, finishCallback, errorCallback) {
-        if (typeof finishCallback === "undefined") { finishCallback = function() { } }
+        if (typeof finishCallback === "undefined") { finishCallback = function() {}; }
         if (typeof errorCallback === "undefined") { errorCallback = defaultError; }
 		if (!Array.isArray(files)) files = [files];
 				

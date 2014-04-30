@@ -27,16 +27,15 @@ var Core;
         console.log("== INITIALIZING MARKTIME ==");
 		
         FastClick.attach(document.body);
-        Utils.include("js/api.js", function() {
-            setTimeout(function() {
+        $.getScript("js/api.js", function() {
             API.autoload(function() {
-                Utils.include("js/plugins.js", function() {
+                $.getScript("js/plugins.js", function() {
                     console.log("== INITIALIZATION COMPLETE ==");
                     initialized = true;
                     if (complete) complete();
                 });
             });
-        }); }, 1000);
+        });
         
         initialized = true;
     }
