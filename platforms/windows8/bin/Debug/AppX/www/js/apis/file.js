@@ -3,13 +3,14 @@
         if (typeof type === "undefined") { type = "persistent"; }
         var plugin = this, root = plugin.name === "MarkTime" ? "/" : plugin.path.replace("\\", "/").replace("../", "/"), filesystem = undefined, error = false;
         initialize();
-
-        this.read = function (file, mode, encoding) {
+        
+        var File = {};
+        File.read = function (file, mode, encoding) {
             waitForInitialize();
             
             if (typeof mode === "undefined") { mode = "text"; }
             if (typeof file === 'string')
-                file = this.getFile(file);
+                file = File.getFile(file);
             
             console.log("Reading file " + file + " (" + mode + ", " + (encoding || 'utf-8') + ")");
             
@@ -17,7 +18,7 @@
             reader.onloadend = function (ev) {
                 result = ev.target.result;
             };
-            reader.onerror = this.onError;
+            reader.onerror = File.onError;
 
             mode = mode.toLowerCase();
             if (mode === "data")
@@ -36,7 +37,7 @@
             return result;
         };
 
-        this.write = function (file, content, append, mode) {
+        File.write = function (file, content, append, mode) {
             waitForInitialize();
             
             if (typeof append === "undefined") { append = false; }
@@ -45,21 +46,21 @@
             console.log("Writing to file " + file + " with " + content.length + " characters (" + (append ? "appending" : "not appending") + ", " + mode + ")");
             
             if (typeof file === 'string')
-                file = this.getFile(file);
+                file = File.getFile(file);
             
             var complete = false;
             file.fileEntry.createWriter(function (writer) {
                 writer.onwriteend = function (ev) {
                     complete = true;
                 };
-                writer.onerror = this.onError;
+                writer.onerror = File.onError;
 
                 if (append)
                     writer.seek(writer.length);
                 if (mode.toLowerCase() === "json")
                     content = JSON.stringify(content);
                 writer.write(content);
-            }, this.onError);
+            }, File.onError);
 
             while (!complete && !error) {
             }
@@ -70,12 +71,12 @@
             return content;
         };
 
-        this.append = function (file, content, mode) {
+        File.append = function (file, content, mode) {
             if (typeof mode === "undefined") { mode = "text"; }
-            return this.write(file, content, true, mode);
+            return File.write(file, content, true, mode);
         };
 
-        this.onError = function (err) {
+        File.onError = function (err) {
             error = true;
             var out = "The operation failed because ";
             switch (err.code) {
@@ -98,7 +99,7 @@
             throw new Error(out);
         };
 
-        this.getFile = function (path) {
+        File.getFile = function (path) {
             waitForInitialize();
             
             console.log("Getting file at " + path);
@@ -108,8 +109,8 @@
                 fe.file(function (file) {
                     f = file;
                     f["fileEntry"] = fe;
-                }, this.onError);
-            }, this.onError);
+                }, File.onError);
+            }, File.onError);
 
             while (typeof f === 'undefined' && !error) {
             }
@@ -126,7 +127,7 @@
 
             window.requestFileSystem(LocalFileSystem[type], 0, function (fs) {
                 filesystem = fs;
-            }, this.onError);
+            }, File.onError);
         }
 
         function waitForInitialize() {
@@ -135,5 +136,7 @@
             error = false;
             return;
         }
+        
+        return File;
     });
 }());

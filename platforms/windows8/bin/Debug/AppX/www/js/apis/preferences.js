@@ -1,22 +1,9 @@
 ﻿(function () {
     API.add("Preferences", function (group) {
-        var prefs = plugins.appPreferences, creator = null, access = false, plugin = this, exists = false, error = false;
+        var prefs, creator = null, access = false, plugin = this, exists = false, error = false;
         var permsKey = "__perms";
         
-        initialize();
-        
-        this.name = group;
-        group = plugin.name + "." + group;
-        
         if (Core.debug) {
-            prefs = {
-                "fetch": function(success, error, group, key) {
-                    success(group + "." + key);
-                },
-                "store": function() {
-                    
-                }
-            };
             (function() {
                 var keys = {};
                 prefs = {
@@ -26,24 +13,30 @@
                     },
                     "store": function(success, error, group, key, value) {
                         keys[group + "." + key] = value;
-                        
+                        success(value);
                     }
                 };
             }());
-        }
+        } else prefs = plugins.appPreferences;
+                
+        initialize();
         
-        this.get = function (key) {
+        var Preferences = {};
+        Preferences.name = group;
+        group = plugin.name + "." + group;
+        
+        Preferences.get = function (key) {
             console.log("Getting key " + key + " in dictionary " + group);
             
             if (key.toLowerCase() === permsKey) {
-                this.onError("Access denied");
+                Preferences.onError("Access denied");
                 return;
             }
             
             var v = undefined;
             prefs.fetch(function (val) {
                 v = val;
-            }, this.onError, group, key);
+            }, Preferences.onError, group, key);
             
             while (typeof v === 'undefined' && !error) {
             }
@@ -52,18 +45,18 @@
             return v;
         };
             
-        this.set = function (key, value) {
+        Preferences.set = function (key, value) {
             console.log("Setting key " + key + " to " + value.length + " characters in dictionary " + group);
             
             if (key.toLowerCase() == permsKey) {
-                this.onError("Access denied");
+                Preferences.onError("Access denied");
                 return;
             }
             
             var v = undefined;
             prefs.store(function (val) {
                 v = val;
-            }, this.onError, group, key, value);
+            }, Preferences.onError, group, key, value);
             
             while (typeof v === 'undefined' && !error) {
             }
@@ -72,18 +65,16 @@
             return v;
         };
 
-        this.default = function (key, value) {
-            if (this.exists(key))
-                return this.get(key);
+        Preferences.default = function (key, value) {
+            if (Preferences.exists(key))
+                return Preferences.get(key);
             else
-                return this.set(key, value);
+                return Preferences.set(key, value);
         };
 
-        this.exists = function (key) {
+        Preferences.exists = function (key) {
             if (typeof key === 'undefined')
                 return exists;
-            if (verify())
-                return;
 
             var v = undefined;
             prefs.fetch(function () {
@@ -99,7 +90,7 @@
             return v;
         };
 
-        this.onError = function (error) {
+        Preferences.onError = function (error) {
             throw new Error("Failed to access preferences: " + error);
         };
 
@@ -119,5 +110,7 @@
             }
             error = false;
         }
+        
+        return Preferences;
     });
 }());

@@ -20,6 +20,7 @@
     Plugins.Default = Default;
     
     console.log("Loading default Plugin configuration");
+    
     var config = API.get("Configuration", "plugin.config").load({
         "folder_root": "/marktime/plugins/",
         "file_list": "list.json",
@@ -30,7 +31,6 @@
         "default_authors": [],
         "default_dependencies": {}
     }), loadedPlugins = {};
-    Plugins.initialize = initialize;
 
     function getPlugin(name) {
         console.log("Getting plugin " + name);

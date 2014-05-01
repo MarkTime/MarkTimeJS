@@ -12,23 +12,48 @@ var Utils;
         if (typeof finishCallback === "undefined") { finishCallback = function() { } }
         if (typeof errorCallback === "undefined") { errorCallback = defaultError; }
 		if (!Array.isArray(files)) files = [files];
-				
+		
+		var finished = 0;
 		for(file in files){
 			console.log("Including file " + files[file]);
 			$.ajax({
 				url: files[file],
-				success: function(data){
+				success: function(data, status, xhr){
 					console.log("Finished loading file " + files[file]);
-					finishCallback(data, files[file]);
+					
+					var split = files[file].toLowerCase().split(".");
+					var ftype = split[split.length - 1] || split[0];
+					
+					if (includeTypes.hasOwnProperty(ftype)) {
+						var r = includeTypes[ftype].call(xhr, data);
+						if (typeof r !== 'undefined') data = r;
+					}
+					
+					finished++;
+					if (finished >= files.length) finishCallback(data, files[file]);
 				},
 				error: function (xhr, status, error) {
 					console.log("Failed to load file " + files[file] + " because " + status + " " + error.stack);
 					errorCallback(status, error, files[file], xhr);
-				}
+				},
+				dataType: "text"
 			});  
 		}
     }
     Utils.include = include;
+	
+	var includeTypes = {
+		"js": function(content) {
+			var s = document.createElement("script");
+			var c = document.createTextNode(content);
+			s.appendChild(c);
+			document.getElementsByTagName("head").item(0).appendChild(s);
+		},
+		"json": function(content) {
+			return JSON.parse(content);
+		}
+	};
+	Utils.includeTypes = includeTypes;
 
     /**
     * Compares two version strings (formatted like "x.x.x")

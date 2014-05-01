@@ -17,18 +17,36 @@ var Utils;
 			console.log("Including file " + files[file]);
 			$.ajax({
 				url: files[file],
-				success: function(data){
+				success: function(data, status, xhr){
 					console.log("Finished loading file " + files[file]);
+					
+					var split = file.toLowerCase().split(".");
+					var ftype = split[split.length - 1];
+					if (includeTypes.hasOwnProperty(ftype)) data = includeTypes[ftype].call(xhr, data);
+					
 					finishCallback(data, files[file]);
 				},
 				error: function (xhr, status, error) {
-					console.log("Failed to load file " + files[file]);
+					console.log("Failed to load file " + files[file] + " because " + status + " " + error.stack);
 					errorCallback(status, error, files[file], xhr);
 				}
 			});  
 		}
     }
     Utils.include = include;
+	
+	var includeTypes = {
+		"js": function(content) {
+			var s = document.createElement("script");
+			var c = document.createTextNode(content);
+			s.appendChild(c);
+			document.getElementsByTagName("head").item(0).appendChild(s);
+		},
+		"json": function(content) {
+			return JSON.decode(content);
+		}
+	};
+	Utils.includeTypes = includeTypes;
 
     /**
     * Compares two version strings (formatted like "x.x.x")

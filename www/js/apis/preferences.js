@@ -4,12 +4,13 @@
         var permsKey = "__perms";
         
         if (Core.debug) {
+            console.log("[Preferences] Using preferences in debug mode");
             (function() {
                 var keys = {};
                 prefs = {
                     "fetch": function(success, error, group, key) {
-                        if (!keys.hasOwnProperty(group + "." + key)) keys[group + "." + key] = group + "." + key;
-                        success(keys[group + "." + key]);
+                        if (!keys.hasOwnProperty(group + "." + key)) error("The specified key does not exist");
+                        else success(keys[group + "." + key]);
                     },
                     "store": function(success, error, group, key, value) {
                         keys[group + "." + key] = value;
@@ -26,7 +27,7 @@
         group = plugin.name + "." + group;
         
         Preferences.get = function (key) {
-            console.log("Getting key " + key + " in dictionary " + group);
+            console.log("    Getting key " + key + " in dictionary " + group);
             
             if (key.toLowerCase() === permsKey) {
                 Preferences.onError("Access denied");
@@ -46,7 +47,7 @@
         };
             
         Preferences.set = function (key, value) {
-            console.log("Setting key " + key + " to " + value.length + " characters in dictionary " + group);
+            console.log("    Setting key " + key + " to " + value.length + " characters in dictionary " + group);
             
             if (key.toLowerCase() == permsKey) {
                 Preferences.onError("Access denied");

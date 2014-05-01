@@ -91,16 +91,13 @@
 	function autoload(complete) {
 		console.log("Autoloading APIs...");
 		Utils.include("js/apis/list.json", function(list) {
-			var loaded = 0;
-			for (var i = 0; i < list.length; i++) {
-				Utils.include("js/apis/" + list[i] + ".js", function() {
-					loaded++;
-					if (loaded >= list.length) {
-						console.log(list.length + " APIs were loaded.");
-						complete();
-					}
-				});
-			}
+			list = list.map(function(n) {
+				return "js/apis/" + n + ".js";
+			});
+			Utils.include(list, function() {
+				console.log(list.length + " APIs were loaded.");
+				complete();
+			});
 		});
 	}
 	API.autoload = autoload;

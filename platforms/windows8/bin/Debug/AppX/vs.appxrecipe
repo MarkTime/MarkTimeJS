@@ -5,7 +5,7 @@
     <WindowsUser>mrfishie</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>424889222AF26F752EFA9441BA3655C9CAABE4958CE96631F9B9392361A858AB</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>08DC4214F637EADDF2DB6863350109981060CDD6DFA49ED4C7EF80B25B8ADAC9</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>marktimejs.boar401s2_0.0.1.0_neutral__dsh9t8a1qg3mw</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>marktimejs.boar401s2_dsh9t8a1qg3mw!marktimejs.boar401s2</RegisteredUserModeAppID>
     <RegisteredPackageID>marktimejs.boar401s2</RegisteredPackageID>
@@ -16,7 +16,7 @@
     <AppXManifest Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-04-24T11:22:11.468</Modified>
+      <Modified>2014-04-24T11:52:17.138</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -42,283 +42,283 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-18-black.png">
       <PackagePath>www\css\jQuery\images\icons-18-black.png</PackagePath>
-      <Modified>2014-04-24T11:22:10.117</Modified>
+      <Modified>2014-04-24T11:52:02.419</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-18-white.png">
       <PackagePath>www\css\jQuery\images\icons-18-white.png</PackagePath>
-      <Modified>2014-04-24T11:22:10.120</Modified>
+      <Modified>2014-04-24T11:52:02.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-36-black.png">
       <PackagePath>www\css\jQuery\images\icons-36-black.png</PackagePath>
-      <Modified>2014-04-24T11:22:10.122</Modified>
+      <Modified>2014-04-24T11:52:02.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-36-white.png">
       <PackagePath>www\css\jQuery\images\icons-36-white.png</PackagePath>
-      <Modified>2014-04-24T11:22:10.125</Modified>
+      <Modified>2014-04-24T11:52:02.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\img\markTime.png">
       <PackagePath>www\img\markTime.png</PackagePath>
-      <Modified>2014-04-24T11:22:10.145</Modified>
+      <Modified>2014-04-24T11:52:02.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\boilerplate.html">
       <PackagePath>www\boilerplate.html</PackagePath>
-      <Modified>2014-04-24T11:22:10.108</Modified>
+      <Modified>2014-04-24T11:52:02.411</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\examplepage.html">
       <PackagePath>www\examplepage.html</PackagePath>
-      <Modified>2014-04-24T11:22:10.142</Modified>
+      <Modified>2014-04-24T11:52:02.442</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\index.html">
       <PackagePath>www\index.html</PackagePath>
-      <Modified>2014-04-24T11:22:10.152</Modified>
+      <Modified>2014-04-24T11:52:02.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\pluginsettingstemplate.html">
       <PackagePath>www\pluginsettingstemplate.html</PackagePath>
-      <Modified>2014-04-24T11:22:10.289</Modified>
+      <Modified>2014-04-24T11:52:02.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\pluginStore.html">
       <PackagePath>www\pluginStore.html</PackagePath>
-      <Modified>2014-04-24T11:22:10.291</Modified>
+      <Modified>2014-04-24T11:52:02.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\settings.html">
       <PackagePath>www\settings.html</PackagePath>
-      <Modified>2014-04-24T11:22:10.293</Modified>
+      <Modified>2014-04-24T11:52:02.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\sync.html">
       <PackagePath>www\sync.html</PackagePath>
-      <Modified>2014-04-24T11:22:10.295</Modified>
+      <Modified>2014-04-24T11:52:02.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\cordova.js">
       <PackagePath>www\cordova.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.349</Modified>
+      <Modified>2014-04-24T11:52:02.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\cordova_plugins.js">
       <PackagePath>www\cordova_plugins.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.561</Modified>
+      <Modified>2014-04-24T11:52:02.868</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\api.js">
       <PackagePath>www\js\api.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.157</Modified>
+      <Modified>2014-04-24T11:52:02.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\configuration.js">
       <PackagePath>www\js\apis\configuration.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.160</Modified>
+      <Modified>2014-04-24T11:52:02.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\events.js">
       <PackagePath>www\js\apis\events.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.162</Modified>
+      <Modified>2014-04-24T11:52:02.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\file.js">
       <PackagePath>www\js\apis\file.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.163</Modified>
+      <Modified>2014-04-24T11:52:02.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\preferences.js">
       <PackagePath>www\js\apis\preferences.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.167</Modified>
+      <Modified>2014-04-24T11:52:02.471</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\core.js">
       <PackagePath>www\js\core.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.169</Modified>
+      <Modified>2014-04-24T11:52:02.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\fastclick.js">
       <PackagePath>www\js\fastclick.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.176</Modified>
+      <Modified>2014-04-24T11:52:02.481</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\jQuery\jquery-1.7.1.min.js">
       <PackagePath>www\js\jQuery\jquery-1.7.1.min.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.220</Modified>
+      <Modified>2014-04-24T11:52:02.522</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\jQuery\jquery.mobile-1.1.0-rc.2.min.js">
       <PackagePath>www\js\jQuery\jquery.mobile-1.1.0-rc.2.min.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.256</Modified>
+      <Modified>2014-04-24T11:52:02.555</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\jQuery\jquery.mobile.custom.min.js">
       <PackagePath>www\js\jQuery\jquery.mobile.custom.min.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.282</Modified>
+      <Modified>2014-04-24T11:52:02.579</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\plugins.js">
       <PackagePath>www\js\plugins.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.285</Modified>
+      <Modified>2014-04-24T11:52:02.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\utils.js">
       <PackagePath>www\js\utils.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.287</Modified>
+      <Modified>2014-04-24T11:52:02.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\me.apla.cordova.app-preferences\src\windows8\platform.js">
       <PackagePath>www\plugins\me.apla.cordova.app-preferences\src\windows8\platform.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.486</Modified>
+      <Modified>2014-04-24T11:52:02.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\me.apla.cordova.app-preferences\www\apppreferences.js">
       <PackagePath>www\plugins\me.apla.cordova.app-preferences\www\apppreferences.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.482</Modified>
+      <Modified>2014-04-24T11:52:02.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\src\windows8\FileProxy.js">
       <PackagePath>www\plugins\org.apache.cordova.file\src\windows8\FileProxy.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.559</Modified>
+      <Modified>2014-04-24T11:52:02.865</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\DirectoryEntry.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.498</Modified>
+      <Modified>2014-04-24T11:52:02.797</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\DirectoryReader.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\DirectoryReader.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.500</Modified>
+      <Modified>2014-04-24T11:52:02.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\Entry.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\Entry.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.506</Modified>
+      <Modified>2014-04-24T11:52:02.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\File.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\File.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.509</Modified>
+      <Modified>2014-04-24T11:52:02.809</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileEntry.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\FileEntry.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.512</Modified>
+      <Modified>2014-04-24T11:52:02.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileError.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\FileError.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.514</Modified>
+      <Modified>2014-04-24T11:52:02.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileReader.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\FileReader.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.521</Modified>
+      <Modified>2014-04-24T11:52:02.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileSystem.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\FileSystem.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.523</Modified>
+      <Modified>2014-04-24T11:52:02.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileUploadOptions.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\FileUploadOptions.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.525</Modified>
+      <Modified>2014-04-24T11:52:02.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileUploadResult.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\FileUploadResult.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.527</Modified>
+      <Modified>2014-04-24T11:52:02.835</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileWriter.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\FileWriter.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.534</Modified>
+      <Modified>2014-04-24T11:52:02.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\Flags.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\Flags.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.536</Modified>
+      <Modified>2014-04-24T11:52:02.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\LocalFileSystem.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\LocalFileSystem.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.537</Modified>
+      <Modified>2014-04-24T11:52:02.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\Metadata.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\Metadata.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.539</Modified>
+      <Modified>2014-04-24T11:52:02.849</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\ProgressEvent.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\ProgressEvent.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.543</Modified>
+      <Modified>2014-04-24T11:52:02.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\requestFileSystem.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\requestFileSystem.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.545</Modified>
+      <Modified>2014-04-24T11:52:02.852</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js">
       <PackagePath>www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.547</Modified>
+      <Modified>2014-04-24T11:52:02.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\task\AppPreferences.js">
       <PackagePath>www\task\AppPreferences.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.477</Modified>
+      <Modified>2014-04-24T11:52:02.774</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.configuration.js">
       <PackagePath>www\ts\api\api.configuration.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.299</Modified>
+      <Modified>2014-04-24T11:52:02.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.events.js">
       <PackagePath>www\ts\api\api.events.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.303</Modified>
+      <Modified>2014-04-24T11:52:02.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.file.js">
       <PackagePath>www\ts\api\api.file.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.306</Modified>
+      <Modified>2014-04-24T11:52:02.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.js">
       <PackagePath>www\ts\api\api.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.310</Modified>
+      <Modified>2014-04-24T11:52:02.617</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.preferences.js">
       <PackagePath>www\ts\api\api.preferences.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.312</Modified>
+      <Modified>2014-04-24T11:52:02.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\core.js">
       <PackagePath>www\ts\core.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.320</Modified>
+      <Modified>2014-04-24T11:52:02.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\plugins\plugins.js">
       <PackagePath>www\ts\plugins\plugins.js</PackagePath>
-      <Modified>2014-04-24T11:22:10.325</Modified>
+      <Modified>2014-04-24T11:52:02.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\index.css">
       <PackagePath>www\css\index.css</PackagePath>
-      <Modified>2014-04-24T11:22:10.111</Modified>
+      <Modified>2014-04-24T11:52:02.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\jquery.mobile-1.1.0-rc.2.min.css">
       <PackagePath>www\css\jQuery\jquery.mobile-1.1.0-rc.2.min.css</PackagePath>
-      <Modified>2014-04-24T11:22:10.129</Modified>
+      <Modified>2014-04-24T11:52:02.430</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\jquery.mobile.custom.structure.min.css">
       <PackagePath>www\css\jQuery\jquery.mobile.custom.structure.min.css</PackagePath>
-      <Modified>2014-04-24T11:22:10.135</Modified>
+      <Modified>2014-04-24T11:52:02.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\jquery.mobile.custom.theme.min.css">
       <PackagePath>www\css\jQuery\jquery.mobile.custom.theme.min.css</PackagePath>
-      <Modified>2014-04-24T11:22:10.140</Modified>
+      <Modified>2014-04-24T11:52:02.439</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\ajax-loader.gif">
       <PackagePath>www\css\jQuery\images\ajax-loader.gif</PackagePath>
-      <Modified>2014-04-24T11:22:10.115</Modified>
+      <Modified>2014-04-24T11:52:02.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\list.json">
       <PackagePath>www\js\apis\list.json</PackagePath>
-      <Modified>2014-04-24T11:22:10.165</Modified>
+      <Modified>2014-04-24T11:52:02.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.configuration.ts">
       <PackagePath>www\ts\api\api.configuration.ts</PackagePath>
-      <Modified>2014-04-24T11:22:10.301</Modified>
+      <Modified>2014-04-24T11:52:02.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.events.ts">
       <PackagePath>www\ts\api\api.events.ts</PackagePath>
-      <Modified>2014-04-24T11:22:10.304</Modified>
+      <Modified>2014-04-24T11:52:02.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.file.ts">
       <PackagePath>www\ts\api\api.file.ts</PackagePath>
-      <Modified>2014-04-24T11:22:10.308</Modified>
+      <Modified>2014-04-24T11:52:02.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.preferences.ts">
       <PackagePath>www\ts\api\api.preferences.ts</PackagePath>
-      <Modified>2014-04-24T11:22:10.314</Modified>
+      <Modified>2014-04-24T11:52:02.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\api\api.ts">
       <PackagePath>www\ts\api\api.ts</PackagePath>
-      <Modified>2014-04-24T11:22:10.316</Modified>
+      <Modified>2014-04-24T11:52:02.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\core.ts">
       <PackagePath>www\ts\core.ts</PackagePath>
-      <Modified>2014-04-24T11:22:10.322</Modified>
+      <Modified>2014-04-24T11:52:02.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\plugins\plugins.ts">
       <PackagePath>www\ts\plugins\plugins.ts</PackagePath>
-      <Modified>2014-04-24T11:22:10.332</Modified>
+      <Modified>2014-04-24T11:52:02.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\compile.bat">
       <PackagePath>www\ts\compile.bat</PackagePath>
-      <Modified>2014-04-24T11:22:10.318</Modified>
+      <Modified>2014-04-24T11:52:02.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\ts\compile.txt">
       <PackagePath>www\ts\compile.txt</PackagePath>
-      <Modified>2014-04-24T11:22:10.319</Modified>
+      <Modified>2014-04-24T11:52:02.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-04-24T11:22:11.019</Modified>
+      <Modified>2014-04-24T11:52:17.008</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

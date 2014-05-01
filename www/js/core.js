@@ -8,7 +8,7 @@ var Core;
 (function (Core) {    
 	var initialized = false;
     
-    Core.debug = true;
+    Core.debug = false;
 	
 	/**
 	 * Function that initializes all the systems of the app

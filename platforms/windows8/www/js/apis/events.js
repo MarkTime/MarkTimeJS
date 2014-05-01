@@ -5,8 +5,9 @@
         var plugin = this, namespace = (plugin.name === "MarkTime") ? "" : (plugin.name + ".");
         if (!events.hasOwnProperty(event))
             events[event] = [];
-
-        this.subscribe = function (callback) {            
+        
+        var Events = {};
+        Events.subscribe = function (callback) {            
             var pname = plugin.name.toLowerCase();
             console.log("Subscribing " + pname + " to event " + event);
             
@@ -17,7 +18,7 @@
 
             events[pname][event].push(callback);
         };
-        this.unsubscribe = function (callback) {
+        Events.unsubscribe = function (callback) {
             console.log("Unsubscribing " + pname + " from event " + event);
             
             var eventlist = events[plugin.name.toLowerCase()][event];
@@ -25,7 +26,7 @@
             if (index > -1)
                 eventlist.splice(index, 1);
         };
-        this.trigger = function () {
+        Events.trigger = function () {
             console.log("Triggering event " + event);
             
             var parameters = [];
@@ -41,7 +42,7 @@
         };
 
         if (plugin.name === "MarkTime") {
-            this.triggerPlugin = function (plugin) {
+            Events.triggerPlugin = function (plugin) {
                 console.log("Triggering custom event for plugin " + plugin);
                 
                 var parameters = [];
@@ -64,5 +65,7 @@
                 });
             }
         }
+        
+        return Events;
     });
 }());

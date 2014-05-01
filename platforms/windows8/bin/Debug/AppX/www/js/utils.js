@@ -22,7 +22,7 @@ var Utils;
 					finishCallback(data, files[file]);
 				},
 				error: function (xhr, status, error) {
-					console.log("Failed to load file " + files[file]);
+					console.log("Failed to load file " + files[file] + " because " + status + " " + error.stack);
 					errorCallback(status, error, files[file], xhr);
 				}
 			});  

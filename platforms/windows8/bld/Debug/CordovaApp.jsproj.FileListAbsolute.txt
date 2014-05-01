@@ -11,3 +11,4 @@ E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bld\Debug\resources.resfiles
 E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bld\Debug\pri.resfiles
 E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bld\Debug\LanguageQualifiers.txt
 E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bld\Debug\ProjectArchitectures.txt
+E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bld\Debug\_pkginfo.txt
