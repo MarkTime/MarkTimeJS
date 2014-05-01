@@ -8,6 +8,7 @@ var Core;
 (function (Core) {    
 	var initialized = false;
     
+<<<<<<< HEAD
     Core.debug = false;
 	
 	/**
@@ -34,17 +35,30 @@ var Core;
         "js/plugins.js"
     ];
     Core.files = files;
+=======
+    Core.debug = true;
+>>>>>>> 93ca703d32f751e564ec44f04e445cf8534c048c
     
     /**
-     * TODO
-     * Show a loading symbol *until* after the `Plugins.initialize()` line. This is when everything is loaded.
+     * Function that initializes all the systems of the app
+     * @requires "deviceready" event to have been fired
      */
     function initialize(complete) {
+        /**
+        * TODO
+        * Show a loading symbol *until* after the `Plugins.initialize()` line. This is when everything is loaded.
+        */
+		/*var DEBUGGING_MODE = true;
+		if (!DEBUGGING_MODE){
+			console.log = function(){};
+		}*/
+			
         console.log("== INITIALIZING MARKTIME ==");
+		
         FastClick.attach(document.body);
-        Utils.include("js/api.js", function() {
+        $.getScript("js/api.js", function() {
             API.autoload(function() {
-                Utils.include("js/plugins.js", function() {
+                $.getScript("js/plugins.js", function() {
                     console.log("== INITIALIZATION COMPLETE ==");
                     initialized = true;
                     if (complete) complete();

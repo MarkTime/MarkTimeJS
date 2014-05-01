@@ -1,0 +1,1 @@
+chrome.exe chrome:\\newtab www.google.com

@@ -1,54 +1,54 @@
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes.dex : \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\BuildConfig.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\MarkTime.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$attr.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$drawable.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$string.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$xml.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$1.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$2.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$3.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$4.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\ContentFilesystem.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\DirectoryManager.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\EncodingException.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileExistsException.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileHelper.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem$1.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem$LimitedInputStream.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem$ReadFileCallback.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$1.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$10.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$11.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$12.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$13.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$14.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$15.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$16.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$17.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$18.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$19.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$2.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$20.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$21.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$22.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$23.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$24.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$3.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$4.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$5.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$6.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$7.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$8.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$9.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$FileOp.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\InvalidModificationException.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\LocalFilesystem.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\LocalFilesystemURL.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\NoModificationAllowedException.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\TypeMismatchException.class \
-E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\dexedLibs\classes-d6089b34159adce820612487bd055641.jar \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes.dex : \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\BuildConfig.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\MarkTime.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$attr.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$drawable.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$string.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R$xml.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\marktimejs\boar401s2\R.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$1.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$2.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$3.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences$4.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\me\apla\cordova\AppPreferences.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\ContentFilesystem.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\DirectoryManager.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\EncodingException.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileExistsException.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileHelper.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem$1.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem$LimitedInputStream.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem$ReadFileCallback.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\Filesystem.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$1.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$10.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$11.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$12.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$13.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$14.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$15.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$16.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$17.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$18.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$19.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$2.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$20.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$21.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$22.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$23.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$24.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$3.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$4.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$5.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$6.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$7.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$8.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$9.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$FileOp.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\InvalidModificationException.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\LocalFilesystem.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\LocalFilesystemURL.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\NoModificationAllowedException.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\classes\org\apache\cordova\file\TypeMismatchException.class \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\dexedLibs\classes-d110eae824b78067493def3244c7b329.jar \

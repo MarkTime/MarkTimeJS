@@ -90,6 +90,7 @@
 	
 	function autoload(complete) {
 		console.log("Autoloading APIs...");
+<<<<<<< HEAD
 		Utils.include("js/apis/list.json", function(list) {
 			list = list.map(function(n) {
 				return "js/apis/" + n + ".js";
@@ -98,6 +99,19 @@
 				console.log(list.length + " APIs were loaded.");
 				complete();
 			});
+=======
+		$.getJSON("js/apis/list.json", function(list) {
+			var loaded = 0;
+			for (var i = 0; i < list.length; i++) {
+				$.getScript("js/apis/" + list[i] + ".js", function() {
+					loaded++;
+					if (loaded >= list.length) {
+						console.log(list.length + " APIs were loaded.");
+						complete();
+					}
+				});
+			}
+>>>>>>> 93ca703d32f751e564ec44f04e445cf8534c048c
 		});
 	}
 	API.autoload = autoload;
