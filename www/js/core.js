@@ -8,33 +8,13 @@ var Core;
 (function (Core) {    
 	var initialized = false;
     
-    Core.debug = false;
-	
-	/**
-	 * Function that initializes all the systems of the app
-	 * @requires "deviceready" event to have been fired
-	 */
-	/*function initialize(){
-		FastClick.attach(document.body);	
-			
-		this.includeFiles();
-		
-		//this.initializeBuiltinAPIs();
-		//console.log("Initialized all APIs!"); //Replaced, everything added in this.includeFiles();
-		
-		this.initializePlugins();		
-		
-		initialized = true;		
-		
-	}
-	Core.initialize = initialize;*/
+    Core.debug = true;    
     
     var files = [
         "js/api.js",
         "js/plugins.js"
     ];
     Core.files = files;
-    Core.debug = true;
     
     /**
      * Function that initializes all the systems of the app

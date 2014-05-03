@@ -2,6 +2,7 @@
 /// <reference path="plugins/plugins.ts" />
 var Utils;
 (function (Utils) {
+    
 	/** 
 	 * Loads a list of json files
 	 * @param array files Array of strings which are URLs of the javascript files to include
@@ -41,7 +42,6 @@ var Utils;
 		}
     }
     Utils.include = include;
-<<<<<<< HEAD
 	
 	var includeTypes = {
 		"js": function(content) {
@@ -55,28 +55,6 @@ var Utils;
 		}
 	};
 	Utils.includeTypes = includeTypes;
-=======
-    
-    /** 
-     * Loads a list of javascript files
-     * @param array files Array of strings which are URLs of the javascript files to include
-     * @param execute function Callback to call when the files have been loaded
-     * @param error function Callback to call if an error occurs
-     */
-    function includeScripts(scripts, finishCallback) {
-        if (typeof finishCallback === "undefined") { finishCallback = function() {}; }
-        if (!Array.isArray(scripts)) scripts = [scripts];
-                
-        for(script in scripts){
-            console.log("Including script " + scripts[script]);
-            $.getScript(scripts[script], function(script, textStatus, jqXHR){
-                console.log("Finished loading script " + scripts[script]);
-                finishCallback(script, textStatus, jqXHR);
-            });
-        }
-    }
-    Utils.includeScripts = includeScripts;    
->>>>>>> 93ca703d32f751e564ec44f04e445cf8534c048c
 
     /**
     * Compares two version strings (formatted like "x.x.x")
