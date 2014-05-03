@@ -1,10 +1,11 @@
 (function () {
-    API.add("GDrive", function(){
-        var plugin = this;
+    API.add("GDrive", function() {        
         
         var GDrive = {};
-        GDrive.authenticate = function (username){
-            if (typeof username == "undefined") return false;
+        GDrive.authenticate = function (){
             
-            
-        }
+        };
+        
+        return GDrive;
+    });
+}());
