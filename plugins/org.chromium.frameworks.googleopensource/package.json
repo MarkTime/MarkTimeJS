@@ -1,0 +1,11 @@
+{
+    "version": "1.0.0",
+    "name": "org.chromium.frameworks.googleopensource",
+    "cordova_name": "Google Open Source iOS Framework Plugin",
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

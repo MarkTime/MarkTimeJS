@@ -4,6 +4,19 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="ChromeStorage">
+        <param name="android-package" value="org.chromium.ChromeStorage" />
+    </feature>
+    <feature name="ChromeIdentity">
+        <param name="android-package" value="org.chromium.ChromeIdentity" />
+    </feature>
+    <access origin="https://accounts.google.com/*" />
     <name>MarkTime</name>
     <description>
         An app which helps with the administrivia of a Boy's Brigade company

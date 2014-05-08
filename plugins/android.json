@@ -29,6 +29,25 @@
                     ]
                 }
             }
+        },
+        "res/xml/config.xml": {
+            "/*": {
+                "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>": 1,
+                "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>": 1
+            },
+            "/widget": {
+                "<feature name=\"ChromeStorage\"><param name=\"android-package\" value=\"org.chromium.ChromeStorage\" /></feature>": 1,
+                "<feature name=\"ChromeIdentity\"><param name=\"android-package\" value=\"org.chromium.ChromeIdentity\" /></feature>": 1,
+                "<access origin=\"https://accounts.google.com/*\" />": 1
+            }
+        },
+        "AndroidManifest.xml": {
+            "/manifest/application": {
+                "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />": 1
+            },
+            "/*": {
+                "<uses-permission android:name=\"android.permission.USE_CREDENTIALS\" />": 1
+            }
         }
     },
     "installed_plugins": {
@@ -37,7 +56,35 @@
         },
         "me.apla.cordova.app-preferences": {
             "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.chromium.identity": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "org.chromium.common": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.chromium.storage": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.chromium.runtime": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "com.google.playservices": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.chromium.frameworks.googleopensource": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.chromium.frameworks.googleplus": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        }
+    }
 }
