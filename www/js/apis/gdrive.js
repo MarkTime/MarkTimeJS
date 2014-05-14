@@ -2,6 +2,12 @@
     API.add("GDrive", function() {            
         
         var GDrive = {};
+        
+        /**
+         * 
+         * @param function callback Callback to call once auth is finished (either successfully or not)
+         * @return string Returns token or null to callback on success 
+         */
         GDrive.authenticate = function (callback){
             chrome.runtime.setManifest({
                 oauth2: {

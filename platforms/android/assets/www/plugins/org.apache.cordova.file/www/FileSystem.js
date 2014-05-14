@@ -41,6 +41,10 @@ FileSystem.prototype.__format__ = function(fullPath) {
     return fullPath;
 };
 
+FileSystem.prototype.toJSON = function() {
+    return "<FileSystem: " + this.name + ">";
+};
+
 module.exports = FileSystem;
 
 });

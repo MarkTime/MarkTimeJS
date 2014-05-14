@@ -33,7 +33,8 @@
         "res/xml/config.xml": {
             "/*": {
                 "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>": 1,
-                "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>": 1
+                "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>": 1,
+                "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>": 1
             },
             "/widget": {
                 "<feature name=\"ChromeStorage\"><param name=\"android-package\" value=\"org.chromium.ChromeStorage\" /></feature>": 1,
@@ -46,14 +47,12 @@
                 "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />": 1
             },
             "/*": {
-                "<uses-permission android:name=\"android.permission.USE_CREDENTIALS\" />": 1
+                "<uses-permission android:name=\"android.permission.USE_CREDENTIALS\" />": 1,
+                "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />": 1
             }
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.file": {
-            "PACKAGE_NAME": "marktimejs.boar401s2"
-        },
         "me.apla.cordova.app-preferences": {
             "PACKAGE_NAME": "marktimejs.boar401s2"
         },
@@ -64,6 +63,9 @@
             "PACKAGE_NAME": "marktimejs.boar401s2"
         },
         "org.chromium.identity": {
+            "PACKAGE_NAME": "marktimejs.boar401s2"
+        },
+        "org.apache.cordova.file": {
             "PACKAGE_NAME": "marktimejs.boar401s2"
         }
     },

@@ -10,6 +10,10 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="ChromeStorage">
         <param name="android-package" value="org.chromium.ChromeStorage" />
     </feature>

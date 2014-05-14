@@ -15,14 +15,15 @@
                 "name": "Tom Barham"
             }
         ],
-        "dependencies": { }
+        "dependencies": { },
+        "path": "/MarkTime/plugins/MarkTime"
     };
     Plugins.Default = Default;
     
     console.log("Loading default Plugin configuration");
     
     var config = API.get("Configuration", "plugin.config").load({
-        "folder_root": "/marktime/plugins/",
+        "folder_root": "/MarkTime/plugins/",
         "file_list": "list.json",
         "file_default": "plugin.js",
         "default_name": "Generic Plugin",

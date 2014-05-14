@@ -1,6 +1,34 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "file": "plugins/me.apla.cordova.app-preferences/www/apppreferences.js",
+        "id": "me.apla.cordova.app-preferences.apppreferences",
+        "clobbers": [
+            "plugins.appPreferences"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
+        "id": "org.apache.cordova.splashscreen.SplashScreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
+    },
+    {
+        "file": "plugins/org.chromium.identity/identity.js",
+        "id": "org.chromium.identity.Identity",
+        "clobbers": [
+            "chrome.identity"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -130,34 +158,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/me.apla.cordova.app-preferences/www/apppreferences.js",
-        "id": "me.apla.cordova.app-preferences.apppreferences",
-        "clobbers": [
-            "plugins.appPreferences"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
-        "id": "org.apache.cordova.splashscreen.SplashScreen",
-        "clobbers": [
-            "navigator.splashscreen"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
-        "id": "org.apache.cordova.inappbrowser.inappbrowser",
-        "clobbers": [
-            "window.open"
-        ]
-    },
-    {
-        "file": "plugins/org.chromium.identity/identity.js",
-        "id": "org.chromium.identity.Identity",
-        "clobbers": [
-            "chrome.identity"
-        ]
-    },
-    {
         "file": "plugins/org.chromium.common/events.js",
         "id": "org.chromium.common.events",
         "clobbers": [
@@ -209,11 +209,11 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.file": "1.0.1",
     "me.apla.cordova.app-preferences": "0.4.2",
     "org.apache.cordova.splashscreen": "0.3.1-dev",
     "org.apache.cordova.inappbrowser": "0.4.1-dev",
     "org.chromium.identity": "1.2.0",
+    "org.apache.cordova.file": "1.1.0",
     "org.chromium.common": "1.0.1",
     "org.chromium.storage": "1.0.1",
     "org.chromium.runtime": "1.0.1",
