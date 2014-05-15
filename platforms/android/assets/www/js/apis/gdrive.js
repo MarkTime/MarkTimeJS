@@ -15,7 +15,7 @@
         
         GDrive.load = function(successCallback){
             function gotDriveClientAPI(){
-                console.log("[GDrive] Loaded the drive client library");
+                console.log("[GDrive] Loaded the drive library");
                 if(successCallback != undefined) successCallback();
             }
             function gotGAPI(){
@@ -23,10 +23,10 @@
                 console.log("[GDrive] Loaded the gapi library");                
             }            
             function loadingGAPI(){
+                console.log("Loading...");                
                 if(gapi.client == undefined) {setTimeout(loadingGAPI, 100); return;}     
                 gotGAPI();                                          
-            }
-            console.log("[GDrive] Loading the GAPI library");                
+            }               
             $.getScript("https://apis.google.com/js/client.js", loadingGAPI);     
         },
         
@@ -61,8 +61,58 @@
             });
         };               
         
-        GDrive.upload = function(){
+        /**
+         * Uploads a file to the current 
+         * 
+         * @param string filename
+         * @param object flags
+         *  overwrite:
+         *   - boolean
+         *  fileID:
+         *   - string (ID)
+         *  create:
+         *   - boolean
+         */
+        GDrive.upload = function(filename, successCallback){            
+            const boundary = '-------314159265358979323846';
+            const delimiter = "\r\n--" + boundary + "\r\n";
+            const close_delim = "\r\n--" + boundary + "--";                        
             
+            var fileData = "";
+            function finishedReading(data, metadata){               
+                var base64Data = btoa(data);
+                var multipartRequestBody =
+                    delimiter +
+                    'Content-Type: application/json\r\n\r\n' +
+                    JSON.stringify(metadata) +
+                    delimiter +
+                    'Content-Type: ' + metadata.mimeType + '\r\n' +
+                    'Content-Transfer-Encoding: base64\r\n' +
+                    '\r\n' +
+                    base64Data +
+                    close_delim;
+                console.log(multipartRequestBody);
+                var request = gapi.client.request({
+                    'path': '/upload/drive/v2/files',
+                    'method': 'POST',
+                    'params': {'uploadType': 'multipart'},
+                    'headers': {
+                      'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+                    },
+                    'body': multipartRequestBody});
+                
+                function onUpload(file){
+                    console.log("[GDrive] Finished uploading! Result: "+file);
+                    if(successCallback != undefined) successCallback(file);
+                }
+                
+                request.execute(onUpload);
+            }                       
+            function initializedFileAPI(){                
+                fileAPI.readAsDriveUploadableFile(filename, finishedReading);
+            }            
+            var fileAPI = API.get("File");
+            fileAPI.initialize(initializedFileAPI);
         };
         
         GDrive.download = function(){
