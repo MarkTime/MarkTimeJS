@@ -15,7 +15,7 @@
         
         GDrive.load = function(successCallback){
             function gotDriveClientAPI(){
-                console.log("[GDrive] Loaded the drive client library");
+                console.log("[GDrive] Loaded the drive library");
                 if(successCallback != undefined) successCallback();
             }
             function gotGAPI(){
@@ -25,8 +25,7 @@
             function loadingGAPI(){
                 if(gapi.client == undefined) {setTimeout(loadingGAPI, 100); return;}     
                 gotGAPI();                                          
-            }
-            console.log("[GDrive] Loading the GAPI library");                
+            }               
             $.getScript("https://apis.google.com/js/client.js", loadingGAPI);     
         },
         

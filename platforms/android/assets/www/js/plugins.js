@@ -1,5 +1,21 @@
-﻿var Plugins;
-(function (Plugins) {
+﻿var Plugins = {};
+
+(function() {
+    /**
+     * Tom's attempt at making parameters that are unlikely to be used in plugin code
+     */
+    Plugins.sandboxer = function(_993807930, outscope, API) {
+        for (var loopid = 0; loopid < outscope; loopid++) {
+            eval("var " + outscope[loopid] + " = null;");
+        }
+        loopid = null;
+        outscope = null;
+        
+        eval(_993807930);
+    }
+}());
+
+(function() {
     var Default = {
         "name": "MarkTime",
         "version": "1.0.0",
@@ -20,7 +36,7 @@
     };
     Plugins.Default = Default;
     
-    console.log("Loading default Plugin configuration");
+    console.log("[Plugins] Loading default Plugin configuration");
     
     var config = API.get("Configuration", "plugin.config").load({
         "folder_root": "/MarkTime/plugins/",
@@ -34,7 +50,7 @@
     }), loadedPlugins = {};
 
     function getPlugin(name) {
-        console.log("Getting plugin " + name);
+        console.log("[Plugins] Getting plugin " + name);
         
         name = name.toLowerCase();
         if (loadedPlugins.hasOwnProperty(name))
@@ -46,7 +62,7 @@
     Plugins.getPlugin = getPlugin;
 
     function list() {
-        console.log("Getting a list of plugins");
+        console.log("[Plugins] Getting a list of plugins");
         
         var list = API.get("File").read(config["folder_root"] + config["file_list"], "json");
         return list.map(function (value) {
@@ -56,7 +72,7 @@
     Plugins.list = list;
 
     function eventAll(name) {
-        console.log("Triggering event " + name + " on all plugins");
+        console.log("[Plugins] Triggering event " + name + " on all plugins");
         
         var parameters = [];
         for (var _i = 0; _i < (arguments.length - 1); _i++) {
@@ -74,7 +90,7 @@
     Plugins.eventAll = eventAll;
 
     function loadAll() {
-        console.log("Loading all plugins");
+        console.log("[Plugins] Loading all plugins");
         
         var list = Plugins.list();
         Plugins.eventAll("load");
@@ -82,11 +98,34 @@
     Plugins.loadAll = loadAll;
 
     function unloadAll() {
-        console.log("Unloading all plugins");
+        console.log("[Plugins] Unloading all plugins");
         
         Plugins.eventAll("unload");
     }
     Plugins.unloadAll = unloadAll;
+    
+    /**
+     * By default, the following global variables are denied from the sandbox:
+     * Plugins      - Prevents loading/firing events on all plugins
+     * $            - Prevents jQuery access
+     * jQuery       - Same as $
+     * Utils        - Prevents file including
+     * FastClick    - Prevents FastClick access
+     * Core         - Prevents MarkTime Core access
+     * document     - Prevents HTML modifying
+     * Document     - Same as document
+     */
+    var sandboxed = [
+        "Plugins",
+        "$",
+        "jQuery",
+        "Utils",
+        "FastClick",
+        "Core",
+        "document",
+        "Document"
+    ];
+    Plugins.addsandbox = function(i) { sandboxed.push(i); }
 
     var pluginProperties = {
         "name": config["default_name"],
@@ -97,7 +136,7 @@
     };
     var Plugin = (function () {
         function Plugin(name) {
-            console.log("Creating plugin " + name);
+            console.log("[Plugins] Creating plugin " + name);
             
             this.path = config["folder_root"] + encodeURIComponent(name) + "/";
             this.name = name;
@@ -105,8 +144,8 @@
             var path = this.path + config["file_default"];
             var content = API.get("File").read(path);
             
-            console.log("Executing plugin in sandbox...");
-            sandboxer(content, API.pluginContext(this));
+            console.log("[Plugins] Executing plugin in sandbox...");
+            Plugins.sandboxer(content, sandboxed.slice(0), API.pluginContext(this));
             this.plugin = API.getPlugin(this);
             
             if (!this.plugin.hasOwnProperty("properties"))
@@ -118,7 +157,7 @@
             
             var dependencies = this["dependencies"], pname;
             
-            console.log("Loading plugin dependencies...");
+            console.log("[Plugins] Loading plugin dependencies...");
             for (pname in dependencies) {
                 if (dependencies.hasOwnProperty(pname)) {
                     var dependency = pname;
@@ -149,9 +188,6 @@
         };
         return Plugin;
     })();
+    
     Plugins.Plugin = Plugin;
-
-    function sandboxer(__code, API) {
-        eval(__code);
-    }
-})(Plugins || (Plugins = {}));
+}());
