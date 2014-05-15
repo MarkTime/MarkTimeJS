@@ -54,7 +54,19 @@
                 fs.root.getDirectory("MarkTime/plugins/", {create: true, exclusive: false}, checkPluginRootExists, onError);                
                 
             }, onError);            
-        };                   
+        };    
+        
+        /**
+         * Turns:
+         * /home/pi/test.txt
+         * Into:
+         * test.txt
+         * 
+         * @param string path Path to strip the directories off 
+         */
+        File.stripPath = function(path){
+            return path.substring(path.lastIndexOf("/")+1, path.length);
+        };               
         
         /**
          * Throws an error if the File API has not yet been initialized. 
@@ -147,6 +159,7 @@
          * @return string Returns read string
          */
         File.read = function(filepath, successCallback){
+<<<<<<< HEAD
             checkInitialization(function() {
                 filepath = sanitizePath(filepath);
                 
@@ -165,6 +178,69 @@
                 rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError);
             });
         },       
+=======
+            filepath = sanitizePath(filepath);
+            
+            function gotFileEntry(fileEntry){fileEntry.file(gotFile, File.onError);}
+            function gotFile(file){
+                var reader = new FileReader();
+                function onReadingEnd(event){
+                    console.log("[File] Finished reading in '"+File.stripPath(filepath)+"'");                    
+                    if(successCallback != undefined) successCallback(event.target.result);
+                }
+                reader.onloadend = onReadingEnd;   
+                reader.onerror = File.onError;                 
+                reader.readAsText(file);
+            }
+            
+            rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError);       
+        },    
+        
+        File.readAsBinaryString = function(filepath, succcessCallback){
+            filepath = sanitizePath(filepath);
+            
+            function gotFileEntry(fileEntry){fileEntry.file(gotFile, File.onError);}
+            function gotFile(file){
+                var reader = new FileReader();
+                function onReadingEnd(event){
+                    console.log("[File] Finished reading in '"+File.stripPath(filepath)+"'");                    
+                    if(successCallback != undefined) successCallback(event.target.result);
+                }
+                reader.onloadend = onReadingEnd;   
+                reader.onerror = File.onError;                 
+                reader.readAsBinaryString(file);
+            }
+            
+            rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError); 
+        },
+        
+        File.readAsDriveUploadableFile = function(filepath, successCallback){
+            filepath = sanitizePath(filepath);
+            
+            function gotFileEntry(fileEntry){fileEntry.file(gotFile, File.onError);}
+            function gotFile(file){
+                var reader = new FileReader();
+                var metadata;
+                function onLoad(e) {
+                    var contentType = file.type || 'application/octet-stream';
+                    metadata = {
+                        'title': File.stripPath(filepath),
+                        'mimeType': contentType
+                    };
+                };
+                function onReadingEnd(event){
+                    console.log("[File] Finished reading in '"+File.stripPath(filepath)+"' as a GDrive uploadable file");                    
+                    if(successCallback != undefined) successCallback(reader.result, metadata);
+                }
+                reader.onload = onLoad;
+                reader.onloadend = onReadingEnd;                  
+                reader.onerror = File.onError;                 
+                reader.readAsBinaryString(file);
+            }
+            
+            rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError); 
+        },
+>>>>>>> 4edd966a7274f9d8ca3475daad896d24faef8e78
         
         /**
          * Writes text to a file
