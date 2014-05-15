@@ -3,6 +3,33 @@
         
         var GDrive = {};
         
+        GDrive.initialize = function(successCallback){
+            function apiAuthenticated(){
+                if(successCallback != undefined) successCallback();
+            }
+            function apiLoaded(){
+                GDrive.authenticate(apiAuthenticated);
+            }
+            GDrive.load(apiLoaded);    
+        },
+        
+        GDrive.load = function(successCallback){
+            function gotDriveClientAPI(){
+                console.log("[GDrive] Loaded the drive client library");
+                if(successCallback != undefined) successCallback();
+            }
+            function gotGAPI(){
+                gapi.client.load("drive", "v2", gotDriveClientAPI);
+                console.log("[GDrive] Loaded the gapi library");                
+            }            
+            function loadingGAPI(){
+                if(gapi.client == undefined) {setTimeout(loadingGAPI, 100); return;}     
+                gotGAPI();                                          
+            }
+            console.log("[GDrive] Loading the GAPI library");                
+            $.getScript("https://apis.google.com/js/client.js", loadingGAPI);     
+        },
+        
         /**
          * 
          * @param function callback Callback to call once auth is finished (either successfully or not)
@@ -18,15 +45,21 @@
                 
             chrome.identity.getAuthToken({interactive: true}, function(token) {
                 if(typeof token == "undefined") {                    
-                    console.log("[GDrive] Unable to obtain auth token!");
+                    console.log("[GDrive] ERROR: Unable to obtain auth token!");
                     if (typeof callback != "undefined") callback();
-                } else {
+                } else {                                    
+                    GDrive.token = {
+                        access_token: token,
+                        state: ['https://www.googleapis.com/auth/drive'], 
+                        };
+                     
+                    gapi.auth.setToken(GDrive.token);
                     console.log("[GDrive] Authenticated with drive!");
-                    GDrive.token = token;
+                    
                     if (typeof callback != "undefined") callback(token);
-                }                                       
+                }                                      
             });
-        };
+        };               
         
         GDrive.upload = function(){
             
