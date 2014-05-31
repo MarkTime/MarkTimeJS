@@ -178,6 +178,7 @@ C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\js\jQuery\jquery.mobile-1.4.2.min.js \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\me.apla.cordova.app-preferences \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.inappbrowser \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.chromium.common \
@@ -206,6 +207,9 @@ C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\requestFileSystem.js \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android\FileSystem.js \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js \
+C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.inappbrowser\www \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.inappbrowser\www\inappbrowser.js \
 C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen\www \

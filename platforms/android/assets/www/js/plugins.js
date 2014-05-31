@@ -1,5 +1,21 @@
-﻿var Plugins;
-(function (Plugins) {
+﻿var Plugins = {};
+
+(function() {
+    /**
+     * Tom's attempt at making parameters that are unlikely to be used in plugin code
+     */
+    Plugins.sandboxer = function(_993807930, outscope, API) {
+        for (var loopid = 0; loopid < outscope; loopid++) {
+            eval("var " + outscope[loopid] + " = null;");
+        }
+        loopid = null;
+        outscope = null;
+        
+        eval(_993807930);
+    }
+}());
+
+(function() {
     var Default = {
         "name": "MarkTime",
         "version": "1.0.0",
@@ -87,6 +103,29 @@
         Plugins.eventAll("unload");
     }
     Plugins.unloadAll = unloadAll;
+    
+    /**
+     * By default, the following global variables are denied from the sandbox:
+     * Plugins      - Prevents loading/firing events on all plugins
+     * $            - Prevents jQuery access
+     * jQuery       - Same as $
+     * Utils        - Prevents file including
+     * FastClick    - Prevents FastClick access
+     * Core         - Prevents MarkTime Core access
+     * document     - Prevents HTML modifying
+     * Document     - Same as document
+     */
+    var sandboxed = [
+        "Plugins",
+        "$",
+        "jQuery",
+        "Utils",
+        "FastClick",
+        "Core",
+        "document",
+        "Document"
+    ];
+    Plugins.addsandbox = function(i) { sandboxed.push(i); }
 
     var pluginProperties = {
         "name": config["default_name"],
@@ -106,7 +145,7 @@
             var content = API.get("File").read(path);
             
             console.log("Executing plugin in sandbox...");
-            sandboxer(content, API.pluginContext(this));
+            Plugins.sandboxer(content, sandboxed.slice(0), API.pluginContext(this));
             this.plugin = API.getPlugin(this);
             
             if (!this.plugin.hasOwnProperty("properties"))
@@ -149,9 +188,6 @@
         };
         return Plugin;
     })();
+    
     Plugins.Plugin = Plugin;
-
-    function sandboxer(__code, API) {
-        eval(__code);
-    }
-})(Plugins || (Plugins = {}));
+}());

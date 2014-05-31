@@ -169,7 +169,7 @@
             }
             
             rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError);       
-        },    
+        };
         
         File.readAsBinaryString = function(filepath, succcessCallback){
             filepath = sanitizePath(filepath);
@@ -187,7 +187,7 @@
             }
             
             rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError); 
-        },
+        };
         
         File.readAsDriveUploadableFile = function(filepath, successCallback){
             filepath = sanitizePath(filepath);
@@ -214,7 +214,7 @@
             }
             
             rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError); 
-        },
+        };
         
         /**
          * Writes text to a file
@@ -256,14 +256,14 @@
             
             //Gets the specified file from the directory
             rootDirectory.getFile(filepath, {create: true, exclusive: false}, gotFileEntry, File.onError);  
-        },
+        };
         
         File.createDirectory = function(path, successCallback){            
             function gotDirectory(){
                 if(successCallback != undefined) successCallback();
             }
             rootDirectory.getDirectory(path, {create: true, exclusive: false}, gotDirectory); 
-        },
+        };
         
         /**
          * Deletes the specified directory
@@ -274,7 +274,7 @@
                 directory.remove();
             }
             rootDirectory.getDirectory(path, {create: false}, gotDirectory);
-        },
+        };
         
         /**
          * Deletes a directory, and all it's subdirectories
@@ -285,7 +285,7 @@
                 directory.removeRecursively();
             }
             rootDirectory.getDirectory(path, {create: false}, gotDirectory);
-        },
+        };
         
         /**
          * Deletes a file
@@ -296,7 +296,7 @@
                 fileEntry.remove();
             }
             rootDirectory.getFile(path, {create: false}, gotFileEntry);
-        },
+        };
         
         /**
          * 'Correctly' handles errors 

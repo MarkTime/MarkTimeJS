@@ -158,6 +158,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
+        "id": "org.apache.cordova.file-transfer.FileTransferError",
+        "clobbers": [
+            "window.FileTransferError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransfer.js",
+        "id": "org.apache.cordova.file-transfer.FileTransfer",
+        "clobbers": [
+            "window.FileTransfer"
+        ]
+    },
+    {
         "file": "plugins/org.chromium.common/events.js",
         "id": "org.chromium.common.events",
         "clobbers": [
@@ -214,6 +228,7 @@ module.exports.metadata =
     "org.apache.cordova.inappbrowser": "0.4.1-dev",
     "org.chromium.identity": "1.2.0",
     "org.apache.cordova.file": "1.1.0",
+    "org.apache.cordova.file-transfer": "0.4.3",
     "org.chromium.common": "1.0.1",
     "org.chromium.storage": "1.0.1",
     "org.chromium.runtime": "1.0.1",
