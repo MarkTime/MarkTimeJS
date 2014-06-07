@@ -54,7 +54,14 @@
                 fs.root.getDirectory("MarkTime/plugins/", {create: true, exclusive: false}, checkPluginRootExists, onError);                
                 
             }, onError);            
-        };    
+        };                   
+        
+        var initializationCallbacks = [];
+        function checkInitialization(callback){
+            if (!initialized) initializationCallbacks.push(callback);
+            else callback();
+        };
+        File.waitForReady = checkInitialization;
         
         /**
          * Turns:
@@ -67,16 +74,6 @@
         File.stripPath = function(path){
             return path.substring(path.lastIndexOf("/")+1, path.length);
         };               
-        
-        /**
-         * Throws an error if the File API has not yet been initialized. 
-         */
-        var initializationCallbacks = [];
-        function checkInitialization(callback){
-            if (!initialized) initializationCallbacks.push(callback);
-            else callback();
-        };
-        File.waitForReady = checkInitialization;
         
         /**
          * Returns an array of file entries 
@@ -159,7 +156,6 @@
          * @return string Returns read string
          */
         File.read = function(filepath, successCallback){
-<<<<<<< HEAD
             checkInitialization(function() {
                 filepath = sanitizePath(filepath);
                 
@@ -177,23 +173,6 @@
                 
                 rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError);
             });
-        },       
-=======
-            filepath = sanitizePath(filepath);
-            
-            function gotFileEntry(fileEntry){fileEntry.file(gotFile, File.onError);}
-            function gotFile(file){
-                var reader = new FileReader();
-                function onReadingEnd(event){
-                    console.log("[File] Finished reading in '"+File.stripPath(filepath)+"'");                    
-                    if(successCallback != undefined) successCallback(event.target.result);
-                }
-                reader.onloadend = onReadingEnd;   
-                reader.onerror = File.onError;                 
-                reader.readAsText(file);
-            }
-            
-            rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError);       
         };
         
         File.readAsBinaryString = function(filepath, succcessCallback){
@@ -239,12 +218,7 @@
             }
             
             rootDirectory.getFile(filepath, {create: true}, gotFileEntry, File.onError); 
-<<<<<<< HEAD
         };
-=======
-        },
->>>>>>> 4edd966a7274f9d8ca3475daad896d24faef8e78
->>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
         
         /**
          * Writes text to a file
@@ -285,22 +259,6 @@
                     writer.write(text); 
                 }
                 
-<<<<<<< HEAD
-                //Writes the text to the file
-                writer.write(text); 
-            }
-            
-            //Gets the specified file from the directory
-            rootDirectory.getFile(filepath, {create: true, exclusive: false}, gotFileEntry, File.onError);  
-        };
-        
-        File.createDirectory = function(path, successCallback){            
-            function gotDirectory(){
-                if(successCallback != undefined) successCallback();
-            }
-            rootDirectory.getDirectory(path, {create: true, exclusive: false}, gotDirectory); 
-        };
-=======
                 //Gets the specified file from the directory
                 rootDirectory.getFile(filepath, {create: true, exclusive: false}, gotFileEntry, File.onError);
             });
@@ -314,20 +272,12 @@
                 rootDirectory.getDirectory(path, {create: true, exclusive: false}, gotDirectory);
             });
         },
->>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
         
         /**
          * Deletes the specified directory
          * @param string path Path of the directory 
          */
         File.deleteDirectory = function(path){
-<<<<<<< HEAD
-            function gotDirectory(directory){
-                directory.remove();
-            }
-            rootDirectory.getDirectory(path, {create: false}, gotDirectory);
-        };
-=======
             checkInitialization(function() {
                 function gotDirectory(directory){
                     directory.remove();
@@ -335,20 +285,12 @@
                 rootDirectory.getDirectory(path, {create: false}, gotDirectory);
             });
         },
->>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
         
         /**
          * Deletes a directory, and all it's subdirectories
          * @param string path Path of the directory 
          */
         File.deleteDirectoryRecursively = function(path){
-<<<<<<< HEAD
-            function gotDirectory(directory){
-                directory.removeRecursively();
-            }
-            rootDirectory.getDirectory(path, {create: false}, gotDirectory);
-        };
-=======
             checkInitialization(function() {
                 function gotDirectory(directory){
                     directory.removeRecursively();
@@ -356,20 +298,12 @@
                 rootDirectory.getDirectory(path, {create: false}, gotDirectory);
             });
         },
->>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
         
         /**
          * Deletes a file
          * @param string path The path of the file to delete 
          */
         File.deleteFile = function(path){
-<<<<<<< HEAD
-            function gotFileEntry(fileEntry){
-                fileEntry.remove();
-            }
-            rootDirectory.getFile(path, {create: false}, gotFileEntry);
-        };
-=======
             checkInitialization(function() {
                 function gotFileEntry(fileEntry){
                     fileEntry.remove();
@@ -377,7 +311,6 @@
                 rootDirectory.getFile(path, {create: false}, gotFileEntry);
             });
         },
->>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
         
         /**
          * 'Correctly' handles errors 

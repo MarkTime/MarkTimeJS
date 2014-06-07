@@ -4,11 +4,16 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
     </feature>
-<<<<<<< HEAD
     <feature name="FileTransfer">
         <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
     </feature>
@@ -17,11 +22,8 @@
     </feature>
     <feature name="ChromeIdentity">
         <param name="android-package" value="org.chromium.ChromeIdentity" />
-=======
-    <feature name="AppPreferences">
-        <param name="android-package" value="me.apla.cordova.AppPreferences" />
->>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
     </feature>
+    <access origin="https://accounts.google.com/*" />
     <name>MarkTime</name>
     <description>
         An app which helps with the administrivia of a Boy's Brigade company

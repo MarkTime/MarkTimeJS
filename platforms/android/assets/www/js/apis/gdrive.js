@@ -2,6 +2,7 @@
     API.add("GDrive", function() {            
         var rootPath = sanitizePath(this.path);
         var GDrive = {};
+        var tempParameters = {}; //Used for temporary storage between callbacks, see GDrive.download
         
         function sanitizePath(path){
             path = path.split("\\").join("/").split("../").join("");
@@ -29,7 +30,6 @@
                 console.log("[GDrive] Loaded the gapi library");                
             }            
             function loadingGAPI(){
-                console.log("Loading...");                
                 if(gapi.client == undefined) {setTimeout(loadingGAPI, 100); return;}     
                 gotGAPI();                                          
             }               
@@ -121,68 +121,51 @@
             fileAPI.initialize(initializedFileAPI);
         };
         
-        GDrive.download = function(fileID, filePath, successCallback){   
-            //Test File: 0BwUSzZIPH0AiMWZkdHdCUFdydFYxVXhhaEZ0RTJqV3hXZjZn
-            //g.download("https://drive.google.com/uc?export=download&id=0BwUSzZIPH0AiMWZkdHdCUFdydFYxVXhhaEZ0RTJqV3hXZjZn", "img.jpg", function(){console.log("Success!");});             
-            
-            //0BwUSzZIPH0AiZ0E4c0thaEZTeFE
-            var accessToken = gapi.auth.getToken().access_token;
-            var xhr = new XMLHttpRequest();
-            var downloadURL = "https://docs.google.com/uc?export=download&id="+fileID;
-            xhr.open('GET', downloadURL);
-            xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-            
-            function string2ArrayBuffer(string, callback) {
-                var bb = new BlobBuilder();
-                bb.append(string);
-                var f = new FileReader();
-                f.onload = function(e) {
-                    callback(e.target.result);
-                }
-                f.readAsArrayBuffer(bb.getBlob());
-            }
-            
-            function loadedFS(){
-                console.log("Done!");
-                GDrive.result = xhr;
-                
-            }
-            
-            function onLoad() {
-                console.log("Loading file API..");
-                var fileAPI = API.get("File");
-                fileAPI.initialize(loadedFS);
-            };
-            
-            xhr.onload = onLoad;                        
-            xhr.onerror = function() {
-                callback(null);
-            };
-            xhr.send();
-           
-           
-           /* Old FileTransfer Code             
-            filePath = sanitizePath(filePath);
-            filePath = "file:///sdcard/"+rootPath+"/"+filePath;
-                                
-            var fileTransfer = new FileTransfer();
-            var uri = encodeURI(url);
-            var accessToken = gapi.auth.getToken().access_token;
-            
-            fileTransfer.download(
-                uri,
-                filePath,
-                successCallback,
-                function(error) {
-                    console.log("[GDrive] File Download error: " + error.code);
-                },
-                false,
-                {
-                    headers: {
-                        "Authorization": 'Bearer ' + accessToken
+        GDrive.getFileMetadata = function(fileID, successCallback, extraData){
+            //0BwUSzZIPH0AiMWZkdHdCUFdydFYxVXhhaEZ0RTJqV3hXZjZn
+            //g.download("0BwUSzZIPH0AiMWZkdHdCUFdydFYxVXhhaEZ0RTJqV3hXZjZn", "img.jpg", function(){console.log("Success!");});
+            request = gapi.client.drive.files.get({"fileId": fileID});
+            request.execute(successCallback);
+        };
+        
+        GDrive.download = function(fileID, savePath, successCallback){  
+            function gotFileMetadata(data){
+                filePath = tempParameters.filename;
+                filePath = sanitizePath(filePath);
+                filePath = "file:///sdcard/"+rootPath+"/"+filePath;
+                                    
+                tempParameters.title = data.title;
+                                    
+                var fileTransfer = new FileTransfer();
+                var uri = encodeURI(data.downloadUrl);
+                var accessToken = gapi.auth.getToken().access_token;
+                fileTransfer.download(
+                    uri,
+                    filePath,
+                    tempParameters.successCallback,
+                    function(error) {
+                        console.log("[GDrive] File Download error: " + error.code);
+                    },
+                    false,
+                    {
+                        headers: {
+                            "Authorization": 'Bearer ' + accessToken
+                        }
                     }
-                }
-            );*/
+                );
+                delete tempParameters.filename;
+                delete tempParameters.successCallback;
+            }
+            function fileDownloadedCallback(){
+                console.log("[GDrive] Downloaded ", tempParameters.title);
+                delete tempParameters.filename;
+                delete tempParameters.successCallback;
+                delete tempParameters.title;
+                successCallback();
+            }
+            tempParameters.successCallback = fileDownloadedCallback;
+            tempParameters.filename = savePath;
+            GDrive.getFileMetadata(fileID, gotFileMetadata);                   
         };
         
         return GDrive;

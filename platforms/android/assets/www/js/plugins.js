@@ -144,11 +144,7 @@
             var path = this.path + config["file_default"];
             var content = API.get("File").read(path);
             
-<<<<<<< HEAD
-            console.log("Executing plugin in sandbox...");
-=======
             console.log("[Plugins] Executing plugin in sandbox...");
->>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
             Plugins.sandboxer(content, sandboxed.slice(0), API.pluginContext(this));
             this.plugin = API.getPlugin(this);
             
