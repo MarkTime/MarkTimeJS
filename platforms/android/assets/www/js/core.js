@@ -30,20 +30,27 @@ var Core;
 			console.log = function(){};
 		}*/
 			
-        console.log("== INITIALIZING MARKTIME ==");
+        console.log("[Core] == INITIALIZING MARKTIME ==");
 		
         FastClick.attach(document.body);
-        $.getScript("js/api.js", function() {
+        console.log("[Core] Loading API...");
+        Utils.include("js/api.js", function() {
+            console.log("[Core] Starting API autoload...");
             API.autoload(function() {
-                $.getScript("js/plugins.js", function() {
-                    console.log("== INITIALIZATION COMPLETE ==");
-                    initialized = true;
-                    if (complete) complete();
+                console.log("[Core] Loading plugins...");
+                Utils.include("js/plugins.js", function() {
+                    console.log("[Core] Starting API tests...");
+                    API.testAll(Plugins.Default, function(success, m) {
+                        if (!success) console.log("[Core] Some of the tests failed! Continuing anyway...");
+                        else console.log("[Core] All tests passed!");
+                        
+                        console.log("[Core] == INITIALIZATION COMPLETE ==");
+                        initialized = true;
+                        if (complete) complete();
+                    });
                 });
             });
         });
-        
-        initialized = true;
     }
     Core.initialize = initialize;
     

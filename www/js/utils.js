@@ -16,11 +16,11 @@ var Utils;
 		
 		var finished = 0;
 		for(file in files){
-			console.log("Including file " + files[file]);
+			console.log("[Utils] Including file " + files[file]);
 			$.ajax({
 				url: files[file],
 				success: function(data, status, xhr){
-					console.log("Finished loading file " + files[file]);
+					console.log("[Utils] Finished loading file " + files[file]);
 					
 					var split = files[file].toLowerCase().split(".");
 					var ftype = split[split.length - 1] || split[0];
@@ -101,6 +101,18 @@ var Utils;
         return 0;
     }
     Utils.versionCompare = versionCompare;
+	
+	function hashCode(text) {
+		var hash = 0, i, chr, len;
+		if (text.length === 0) return hash;
+		for (i = 0, len = text.length; i < len; i++) {
+			chr = text.charCodeAt(i);
+			hash = ((hash << 5) - hash) + chr;
+			hash |= 0;
+		}
+		return hash;
+	}
+	Utils.hashCode = hashCode;
 
     function defaultError(status, error, file) {
         status[0] = status[0].toUpperCase();

@@ -36,7 +36,7 @@
     };
     Plugins.Default = Default;
     
-    console.log("Loading default Plugin configuration");
+    console.log("[Plugins] Loading default Plugin configuration");
     
     var config = API.get("Configuration", "plugin.config").load({
         "folder_root": "/MarkTime/plugins/",
@@ -50,7 +50,7 @@
     }), loadedPlugins = {};
 
     function getPlugin(name) {
-        console.log("Getting plugin " + name);
+        console.log("[Plugins] Getting plugin " + name);
         
         name = name.toLowerCase();
         if (loadedPlugins.hasOwnProperty(name))
@@ -62,7 +62,7 @@
     Plugins.getPlugin = getPlugin;
 
     function list() {
-        console.log("Getting a list of plugins");
+        console.log("[Plugins] Getting a list of plugins");
         
         var list = API.get("File").read(config["folder_root"] + config["file_list"], "json");
         return list.map(function (value) {
@@ -72,7 +72,7 @@
     Plugins.list = list;
 
     function eventAll(name) {
-        console.log("Triggering event " + name + " on all plugins");
+        console.log("[Plugins] Triggering event " + name + " on all plugins");
         
         var parameters = [];
         for (var _i = 0; _i < (arguments.length - 1); _i++) {
@@ -90,7 +90,7 @@
     Plugins.eventAll = eventAll;
 
     function loadAll() {
-        console.log("Loading all plugins");
+        console.log("[Plugins] Loading all plugins");
         
         var list = Plugins.list();
         Plugins.eventAll("load");
@@ -98,7 +98,7 @@
     Plugins.loadAll = loadAll;
 
     function unloadAll() {
-        console.log("Unloading all plugins");
+        console.log("[Plugins] Unloading all plugins");
         
         Plugins.eventAll("unload");
     }
@@ -136,7 +136,7 @@
     };
     var Plugin = (function () {
         function Plugin(name) {
-            console.log("Creating plugin " + name);
+            console.log("[Plugins] Creating plugin " + name);
             
             this.path = config["folder_root"] + encodeURIComponent(name) + "/";
             this.name = name;
@@ -144,7 +144,11 @@
             var path = this.path + config["file_default"];
             var content = API.get("File").read(path);
             
+<<<<<<< HEAD
             console.log("Executing plugin in sandbox...");
+=======
+            console.log("[Plugins] Executing plugin in sandbox...");
+>>>>>>> 4a2f27d7eb4458a3668cd29fdaad80c002e18890
             Plugins.sandboxer(content, sandboxed.slice(0), API.pluginContext(this));
             this.plugin = API.getPlugin(this);
             
@@ -157,7 +161,7 @@
             
             var dependencies = this["dependencies"], pname;
             
-            console.log("Loading plugin dependencies...");
+            console.log("[Plugins] Loading plugin dependencies...");
             for (pname in dependencies) {
                 if (dependencies.hasOwnProperty(pname)) {
                     var dependency = pname;
