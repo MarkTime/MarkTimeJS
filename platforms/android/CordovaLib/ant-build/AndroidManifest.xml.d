@@ -1,2 +1,2 @@
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\CordovaLib\ant-build\AndroidManifest.xml : \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\CordovaLib\AndroidManifest.xml \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\CordovaLib\ant-build\AndroidManifest.xml : \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\CordovaLib\AndroidManifest.xml \

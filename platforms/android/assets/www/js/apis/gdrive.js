@@ -97,7 +97,6 @@
                     '\r\n' +
                     base64Data +
                     close_delim;
-                console.log(multipartRequestBody);
                 var request = gapi.client.request({
                     'path': '/upload/drive/v2/files',
                     'method': 'POST',
@@ -121,14 +120,24 @@
             fileAPI.initialize(initializedFileAPI);
         };
         
-        GDrive.getFileMetadata = function(fileID, successCallback, extraData){
-            //0BwUSzZIPH0AiMWZkdHdCUFdydFYxVXhhaEZ0RTJqV3hXZjZn
-            //g.download("0BwUSzZIPH0AiMWZkdHdCUFdydFYxVXhhaEZ0RTJqV3hXZjZn", "img.jpg", function(){console.log("Success!");});
+        /**
+         * Fetches a file's metadata from GDrive
+         * @param string fileID The GDrive File's ID
+         * @param function successCallback Function to call on success
+         */
+        GDrive.getFileMetadata = function(fileID, successCallback){
             request = gapi.client.drive.files.get({"fileId": fileID});
             request.execute(successCallback);
         };
         
+        /**
+         * Downloads a file from GDrive and saves it to the local device
+         * @param String fileID The GDrive File's ID
+         * @param String savePath Path to save the downloaded file to
+         * @param Function successCallback Function to callback on success
+         */
         GDrive.download = function(fileID, savePath, successCallback){  
+            //g.download("0BwUSzZIPH0AiMWZkdHdCUFdydFYxVXhhaEZ0RTJqV3hXZjZn", "img.jpg", function(){console.log("Success!");});
             function gotFileMetadata(data){
                 filePath = tempParameters.filename;
                 filePath = sanitizePath(filePath);
@@ -157,7 +166,7 @@
                 delete tempParameters.successCallback;
             }
             function fileDownloadedCallback(){
-                console.log("[GDrive] Downloaded ", tempParameters.title);
+                console.log("[GDrive] Downloaded", tempParameters.title);
                 delete tempParameters.filename;
                 delete tempParameters.successCallback;
                 delete tempParameters.title;

@@ -1,5 +1,3 @@
-/// <reference path="api/api.ts" />
-/// <reference path="plugins/plugins.ts" />
 var Utils;
 (function (Utils) {
     
@@ -16,29 +14,32 @@ var Utils;
 		
 		var finished = 0;
 		for(file in files){
-			console.log("[Utils] Including file " + files[file]);
-			$.ajax({
-				url: files[file],
-				success: function(data, status, xhr){
-					console.log("[Utils] Finished loading file " + files[file]);
-					
-					var split = files[file].toLowerCase().split(".");
-					var ftype = split[split.length - 1] || split[0];
-					
-					if (includeTypes.hasOwnProperty(ftype)) {
-						var r = includeTypes[ftype].call(xhr, data);
-						if (typeof r !== 'undefined') data = r;
-					}
-					
-					finished++;
-					if (finished >= files.length) finishCallback(data, files[file]);
-				},
-				error: function (xhr, status, error) {
-					console.log("Failed to load file " + files[file] + " because " + status + " " + error.stack);
-					errorCallback(status, error, files[file], xhr);
-				},
-				dataType: "text"
-			});  
+			// Use a closure to avoid annoying async references
+			(function() {
+				console.log("[Utils] Including file " + files[file]);
+				$.ajax({
+					url: files[file],
+					success: function(data, status, xhr){
+						console.log("[Utils] Finished loading file " + files[file]);
+						
+						var split = files[file].toLowerCase().split(".");
+						var ftype = split[split.length - 1] || split[0];
+						
+						if (includeTypes.hasOwnProperty(ftype)) {
+							var r = includeTypes[ftype].call(xhr, data);
+							if (typeof r !== 'undefined') data = r;
+						}
+						
+						finished++;
+						if (finished >= files.length) finishCallback(data, files[file]);
+					},
+					error: function (xhr, status, error) {
+						console.log("Failed to load file " + files[file] + " because " + status + " " + error.stack);
+						errorCallback(status, error, files[file], xhr);
+					},
+					dataType: "text"
+				});
+			}());
 		}
     }
     Utils.include = include;

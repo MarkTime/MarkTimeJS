@@ -1,37 +1,37 @@
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-gen\marktimejs\boar401s2\R.java \
- : C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\values\strings.xml \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\values\version.xml \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\res\xml\config.xml \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_action_next_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_action_previous_item.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_action_remove.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_launcher.png \
-C:\Users\John's Laptop\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\AndroidManifest.xml \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-gen\marktimejs\boar401s2\R.java \
+ : E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-hdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-mdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xhdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\drawable-xxhdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\values\strings.xml \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\values\version.xml \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\res\xml\config.xml \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-hdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-mdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xhdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_action_next_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_action_previous_item.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_action_remove.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\res\drawable-xxhdpi\ic_launcher.png \
+E:\Documents\GitHub\MarkTimeJS\platforms\android\ant-build\AndroidManifest.xml \

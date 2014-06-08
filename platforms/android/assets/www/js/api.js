@@ -105,19 +105,22 @@
 	 * @param {Function} callback Function to call on completion
 	 */
 	function testAll(plugin, callback) {
-		console.log("[Test] Testing all APIs as plugin '" + plugin.name + "'");
+		console.log("[Test] Testing all APIs with plugin '" + plugin.name + "' (this should be the global plugin)");
 		var apis = getAPINames(), count = 0, success = true, results = {};
 		for (var i = 0; i < apis.length; i++) {
-			var name = apis[i];
-			test(name, plugin, function(scount, fcount, info) {
-				if (!scount) success = false;
-				results[name] = info;
-				
-				count++;
-				if (count >= apis.length) {
-					callback(success, results);
-				}
-			});
+			// Use a closure to avoid annoying async references
+			(function() {
+				var name = apis[i];
+				test(name, plugin, function(scount, fcount, info) {
+					if (!scount) success = false;
+					results[name] = info;
+					
+					count++;
+					if (count >= apis.length) {
+						callback(success, results);
+					}
+				});
+			}());
 		}
 	}
 	API.testAll = testAll;
