@@ -28,12 +28,14 @@
          * This function gets the file system. The file system is required
          * to get files. This is a pre-requisit for any other functions.
          */
-        File.initialize = function(successCallback, errorCallback){
-            var previouslyErrored = false;
-            function onError(err){        
-                console.log("[File] ERROR: "+err);
-                if(errorCallback != undefined) errorCallback(err);                
-            }        
+        File.initialize = function(successCallback){
+            if (initialized) {
+                console.log("[File] File API can't be initialized twice! Skipping initialization.");
+                successCallback();
+                return;
+            }
+            
+            var previouslyErrored = false;       
             window.requestFileSystem(LocalFileSystem[type], 0, function(fs){
                 console.log("[File] Got the file system");
                 
@@ -49,11 +51,13 @@
                 }                
                 
                 function checkPluginRootExists(){
-                    fs.root.getDirectory(rootPath, {create: true, exclusive: false}, gotRootDirectory, onError);
+                    console.log("[*****] Checking plugin root exists");
+                    fs.root.getDirectory(rootPath, {create: true, exclusive: false}, gotRootDirectory, File.onError);
                 }
-                fs.root.getDirectory("MarkTime/plugins/", {create: true, exclusive: false}, checkPluginRootExists, onError);                
+                console.log("[******] Getting MarkTime/plugins");
+                fs.root.getDirectory("MarkTime/plugins/", {create: true, exclusive: false}, checkPluginRootExists, File.onError);                
                 
-            }, onError);            
+            }, File.onError);            
         };                   
         
         var initializationCallbacks = [];
@@ -86,7 +90,7 @@
          * @param function successCallback Callback on success
          * @param errorCallback Callback on error
          */
-        File.getEntries = function(path, flags, successCallback, errorCallback){
+        File.getEntries = function(path, flags, successCallback){
             checkInitialization(function() {
             
                 //If the path isn't defined...
@@ -141,11 +145,11 @@
                 function gotDirectory(directory){
                     //Reads in the entries in the directory, and spits them out to the filter
                     reader = directory.createReader();
-                    reader.readEntries(filter, errorCallback);
+                    reader.readEntries(filter, File.onError);
                 }
                 
                 //Gets the specified directory so it can create a reader on it, and start reading in entries
-                rootDirectory.getDirectory(path, {}, gotDirectory, errorCallback);
+                rootDirectory.getDirectory(path, {}, gotDirectory, File.onError);
             });
         };
         
@@ -240,6 +244,7 @@
                 filepath = sanitizePath(filepath);
                 
                 //Run when the file entry has been gotten
+                console.log("[******] Getting file entry for '" + filepath + "'");
                 function gotFileEntry(fileEntry){fileEntry.createWriter(gotFileWriter, File.onError);}
                 
                 //Called when ready to start writing
@@ -259,6 +264,7 @@
                     writer.write(text); 
                 }
                 
+                console.log("[******] Getting file for '" + filepath + "'")
                 //Gets the specified file from the directory
                 rootDirectory.getFile(filepath, {create: true, exclusive: false}, gotFileEntry, File.onError);
             });
@@ -334,8 +340,14 @@
                 case FileError.INVALID_STATE_ERR:
                     out += "the state was invalid";
                     break;
+                case FileError.PATH_EXISTS_ERR:
+                    out += "the path already exists";
+                    break;
+                default:
+                    out += "of an unknown reason (code is " + err.code + ")";
             }
-            throw new Error(out);
+            console.log("File error!", err);
+            throw /*new Error(*/out/*)*/;
         };
         
         File.initialize();

@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TOM</Machine>
+    <WindowsUser>mrfishie</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>EB5AF280DEC9B10A023776198702C0EA39DE8C0CBF23D5E4173358419911842A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>marktimejs.boar401s2_0.0.1.0_neutral__dsh9t8a1qg3mw</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>marktimejs.boar401s2_dsh9t8a1qg3mw!marktimejs.boar401s2</RegisteredUserModeAppID>
+    <RegisteredPackageID>marktimejs.boar401s2</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Apache Cordova User</RegisteredPackagePublisher>
+    <RegisteredVersion>0.0.1.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-08T06:00:06.453</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-04-24T08:55:09.541</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-04-24T08:55:09.544</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-04-24T08:55:09.548</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-04-24T08:55:09.550</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\action-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\action-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.943</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\action-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\action-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.945</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\alert-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\alert-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\alert-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\alert-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.948</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-d-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-d-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.950</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-d-l-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-d-l-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-d-l-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-d-l-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.954</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-d-r-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-d-r-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.955</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-d-r-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-d-r-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.957</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-d-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-d-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.959</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-l-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-l-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.960</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-l-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-l-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.962</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-r-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-r-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.963</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-r-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-r-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.965</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-u-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-u-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.967</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-u-l-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-u-l-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.968</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-u-l-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-u-l-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.970</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-u-r-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-u-r-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-u-r-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-u-r-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.973</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\arrow-u-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\arrow-u-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.975</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\audio-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\audio-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.977</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\audio-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\audio-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.978</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\back-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\back-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.980</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\back-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\back-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.981</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\bars-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\bars-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.983</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\bars-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\bars-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.985</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\bullets-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\bullets-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.987</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\bullets-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\bullets-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.989</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\calendar-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\calendar-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.990</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\calendar-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\calendar-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.991</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\camera-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\camera-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.993</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\camera-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\camera-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.995</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-d-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-d-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.997</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-d-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-d-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:04.999</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-l-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-l-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-l-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-l-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.002</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-r-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-r-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.004</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-r-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-r-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.006</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-u-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-u-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.007</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\carat-u-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\carat-u-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\check-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\check-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\check-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\check-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.011</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\clock-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\clock-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.013</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\clock-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\clock-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.015</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\cloud-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\cloud-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.017</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\cloud-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\cloud-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.019</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\comment-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\comment-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.021</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\comment-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\comment-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.023</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\delete-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\delete-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.025</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\delete-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\delete-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.027</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\edit-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\edit-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.028</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\edit-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\edit-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.030</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\eye-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\eye-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.032</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\eye-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\eye-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.034</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\forbidden-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\forbidden-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.036</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\forbidden-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\forbidden-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.038</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\forward-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\forward-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.039</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\forward-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\forward-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.041</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\gear-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\gear-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\gear-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\gear-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\grid-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\grid-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\grid-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\grid-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.047</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\heart-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\heart-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.049</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\heart-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\heart-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.051</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\home-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\home-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.053</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\home-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\home-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.054</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\info-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\info-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\info-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\info-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.058</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\location-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\location-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.059</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\location-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\location-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.061</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\lock-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\lock-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\lock-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\lock-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\mail-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\mail-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.067</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\mail-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\mail-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.069</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\minus-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\minus-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\minus-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\minus-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.072</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\navigation-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\navigation-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.073</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\navigation-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\navigation-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.075</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\phone-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\phone-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.076</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\phone-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\phone-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\plus-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\plus-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.080</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\plus-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\plus-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\power-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\power-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.083</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\power-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\power-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\recycle-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\recycle-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.087</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\recycle-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\recycle-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.089</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\refresh-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\refresh-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.090</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\refresh-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\refresh-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\search-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\search-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.094</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\search-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\search-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.095</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\shop-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\shop-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\shop-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\shop-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.099</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\star-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\star-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\star-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\star-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\tag-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\tag-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.104</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\tag-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\tag-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.106</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\user-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\user-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.107</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\user-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\user-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.109</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\video-black.png">
+      <PackagePath>www\css\jQuery\images\icons-png\video-black.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\icons-png\video-white.png">
+      <PackagePath>www\css\jQuery\images\icons-png\video-white.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.112</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\img\markTime.png">
+      <PackagePath>www\img\markTime.png</PackagePath>
+      <Modified>2014-06-08T06:00:05.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\boilerplate.html">
+      <PackagePath>www\boilerplate.html</PackagePath>
+      <Modified>2014-06-08T06:00:04.935</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\examplepage.html">
+      <PackagePath>www\examplepage.html</PackagePath>
+      <Modified>2014-06-08T06:00:05.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+      <Modified>2014-06-08T06:00:05.228</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\pluginsettingstemplate.html">
+      <PackagePath>www\pluginsettingstemplate.html</PackagePath>
+      <Modified>2014-06-08T06:00:05.437</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\pluginStore.html">
+      <PackagePath>www\pluginStore.html</PackagePath>
+      <Modified>2014-06-08T06:00:05.440</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\settings.html">
+      <PackagePath>www\settings.html</PackagePath>
+      <Modified>2014-06-08T06:00:05.442</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\sync.html">
+      <PackagePath>www\sync.html</PackagePath>
+      <Modified>2014-06-08T06:00:05.443</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.458</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.770</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\api.js">
+      <PackagePath>www\js\api.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.237</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\configuration.js">
+      <PackagePath>www\js\apis\configuration.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\events.js">
+      <PackagePath>www\js\apis\events.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.242</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\file.js">
+      <PackagePath>www\js\apis\file.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.249</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\gdrive.js">
+      <PackagePath>www\js\apis\gdrive.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.251</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\preferences.js">
+      <PackagePath>www\js\apis\preferences.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.258</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\template.js">
+      <PackagePath>www\js\apis\template.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.260</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\core.js">
+      <PackagePath>www\js\core.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.262</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\fastclick.js">
+      <PackagePath>www\js\fastclick.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.269</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\jQuery\jquery-1.7.1.min.js">
+      <PackagePath>www\js\jQuery\jquery-1.7.1.min.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.315</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\jQuery\jquery-2.1.0.min.js">
+      <PackagePath>www\js\jQuery\jquery-2.1.0.min.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.361</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\jQuery\jquery.mobile-1.4.2.min.js">
+      <PackagePath>www\js\jQuery\jquery.mobile-1.4.2.min.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.430</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\plugins.js">
+      <PackagePath>www\js\plugins.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.433</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\utils.js">
+      <PackagePath>www\js\utils.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.435</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\me.apla.cordova.app-preferences\src\windows8\platform.js">
+      <PackagePath>www\plugins\me.apla.cordova.app-preferences\src\windows8\platform.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.605</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\me.apla.cordova.app-preferences\www\apppreferences.js">
+      <PackagePath>www\plugins\me.apla.cordova.app-preferences\www\apppreferences.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.601</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\src\windows8\FileProxy.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\src\windows8\FileProxy.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.677</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\DirectoryEntry.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.621</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\DirectoryReader.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\DirectoryReader.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.623</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\Entry.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\Entry.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.629</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\File.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\File.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.631</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileEntry.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\FileEntry.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileError.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\FileError.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.636</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileReader.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\FileReader.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.642</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileSystem.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\FileSystem.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.644</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileUploadOptions.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\FileUploadOptions.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.646</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileUploadResult.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\FileUploadResult.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.648</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\FileWriter.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\FileWriter.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.654</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\Flags.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\Flags.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.657</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\LocalFileSystem.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\LocalFileSystem.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.659</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\Metadata.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\Metadata.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.661</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\ProgressEvent.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\ProgressEvent.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.662</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\requestFileSystem.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\requestFileSystem.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.664</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js">
+      <PackagePath>www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.667</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js">
+      <PackagePath>www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.687</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js">
+      <PackagePath>www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.685</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.file-transfer\www\windows8\FileTransferProxy.js">
+      <PackagePath>www\plugins\org.apache.cordova.file-transfer\www\windows8\FileTransferProxy.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.690</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.inappbrowser\www\inappbrowser.js">
+      <PackagePath>www\plugins\org.apache.cordova.inappbrowser\www\inappbrowser.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.697</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.inappbrowser\www\windows8\InAppBrowserProxy.js">
+      <PackagePath>www\plugins\org.apache.cordova.inappbrowser\www\windows8\InAppBrowserProxy.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.699</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.splashscreen\www\splashscreen.js">
+      <PackagePath>www\plugins\org.apache.cordova.splashscreen\www\splashscreen.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.apache.cordova.splashscreen\www\windows8\SplashScreenProxy.js">
+      <PackagePath>www\plugins\org.apache.cordova.splashscreen\www\windows8\SplashScreenProxy.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.708</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.common\errors.js">
+      <PackagePath>www\plugins\org.chromium.common\errors.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.717</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.common\events.js">
+      <PackagePath>www\plugins\org.chromium.common\events.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.712</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.common\helpers.js">
+      <PackagePath>www\plugins\org.chromium.common\helpers.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.721</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.common\stubs.js">
+      <PackagePath>www\plugins\org.chromium.common\stubs.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.identity\identity.js">
+      <PackagePath>www\plugins\org.chromium.identity\identity.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.731</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.runtime\api\app\runtime.js">
+      <PackagePath>www\plugins\org.chromium.runtime\api\app\runtime.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.758</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.runtime\api\runtime.js">
+      <PackagePath>www\plugins\org.chromium.runtime\api\runtime.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.760</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.runtime\lib\CryptoJS\enc-base64-min.js">
+      <PackagePath>www\plugins\org.chromium.runtime\lib\CryptoJS\enc-base64-min.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.768</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.runtime\lib\CryptoJS\sha256.js">
+      <PackagePath>www\plugins\org.chromium.runtime\lib\CryptoJS\sha256.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.764</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\plugins\org.chromium.storage\storage.js">
+      <PackagePath>www\plugins\org.chromium.storage\storage.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.754</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\task\AppPreferences.js">
+      <PackagePath>www\task\AppPreferences.js</PackagePath>
+      <Modified>2014-06-08T06:00:05.598</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\index.css">
+      <PackagePath>www\css\index.css</PackagePath>
+      <Modified>2014-06-08T06:00:04.938</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\jquery.mobile.icons.min.css">
+      <PackagePath>www\css\jQuery\jquery.mobile.icons.min.css</PackagePath>
+      <Modified>2014-06-08T06:00:05.210</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\jquery.mobile.structure-1.4.2.min.css">
+      <PackagePath>www\css\jQuery\jquery.mobile.structure-1.4.2.min.css</PackagePath>
+      <Modified>2014-06-08T06:00:05.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\MarkTimeJS.min.css">
+      <PackagePath>www\css\jQuery\MarkTimeJS.min.css</PackagePath>
+      <Modified>2014-06-08T06:00:05.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\css\jQuery\images\ajax-loader.gif">
+      <PackagePath>www\css\jQuery\images\ajax-loader.gif</PackagePath>
+      <Modified>2014-06-08T06:00:04.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\www\js\apis\list.json">
+      <PackagePath>www\js\apis\list.json</PackagePath>
+      <Modified>2014-06-08T06:00:05.253</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Documents\GitHub\MarkTimeJS\platforms\windows8\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-06-08T06:00:06.312</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.9200.20512</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.9200.20512</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

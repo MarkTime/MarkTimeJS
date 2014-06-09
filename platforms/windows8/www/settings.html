@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>MarkTimeJS</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="css/jQuery/MarkTimeJS.min.css" />
+        <script type="text/javascript" src="js/jQuery/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/jquery.mobile-1.4.2.min.js"></script> 
+
+	<body> 
+
+		<div data-role="page" id="body">
+			<!-- Header -->
+			<div data-role="header">
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="arrow-l">Back</a>
+				<h1>Settings</h1>				
+				<a href="index.html" data-theme="a" data-transition="slide" data-rel="back" data-icon="home">Home</a>
+			</div>
+
+			<!-- Body -->
+			<div data-role="content" >
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Google Account Settings</h4>
+				<ul data-role="listview" data-inset="false">
+					<li>Username: <input type="text" name="username" id="basic" value="" data-mini="true" /></li>
+					<li>Password: <input type="password" name="password" id="basic" value="" data-mini="true" /></li>
+				</ul>	
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Database Settings<h4>
+				<ul data-role="listview" data-inset="false">
+					<li>Database Name: <input type="text" name="databaseName" id="basic" value="" data-mini="true" /></li>
+					<li>Database Password: <input type="password" name="databasePassword" id="basic" value="" data-mini="true" /></li>
+				</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Plug-in Manager<h4>
+				<ul data-role="listview" data-inset="false">
+					<li><a href="pluginsettingstemplate.html" data-transition="slide">Example Plug-in Manager Page</a></li>
+					<li><a href="pluginsettingstemplate.html" data-transition="slide">Example Plug-in Manager Page 2(etc)</a></li>
+				</ul>
+				<h5>Click on the links above to go to their respective settings pages. On these pages you can enable/disable the plug-in and tweak other settings specific to that plug-in.
+				</div>	
+				<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+				<h4>Theme Selector<h4>
+				<ul data-role="listview" data-inset="false">
+					<form>
+						<fieldset data-role="controlgroup">
+							<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="1" checked="checked">
+							<label for="radio-choice-v-2a">One</label>
+							<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="2">
+							<label for="radio-choice-v-2b">Two</label>
+							<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="3">
+							<label for="radio-choice-v-2c">Three</label>
+						</fieldset>
+					</form>
+					</form>
+				</div>
+				<p>
+			</div>
+		</div><!-- /page one -->
+		
+	</body>
+</html>

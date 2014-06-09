@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.google.playservices": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "me.apla.cordova.app-preferences": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.apache.cordova.file": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.apache.cordova.file-transfer": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.chromium.common": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.chromium.frameworks.googleopensource": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.chromium.frameworks.googleplus": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.chromium.identity": {
+            "PACKAGE_NAME": "MarkTime"
+        }
+    },
+    "dependent_plugins": {
+        "org.chromium.storage": {
+            "PACKAGE_NAME": "MarkTime"
+        },
+        "org.chromium.runtime": {
+            "PACKAGE_NAME": "MarkTime"
+        }
+    }
+}
