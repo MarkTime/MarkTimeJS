@@ -1,6 +1,9 @@
 MarkTimeJS
 ==========
 
+Hello, thanks for checking out **MarkTimeJS**! This repo has been superseded by the newer [MarkTimeJSv2 repo](https://github.com/MarkTime/MarkTimeJSv2). You have been warned.
+
+
 Welcome to the **MarkTimeJS** - the open source projet for helping with the administration of Boy's Brigade like organizations powered by [Apache Cordova](https://cordova.apache.org/) and [jQuery Mobile](http://jquerymobile.com/).
 
 **MarkTimeJS** is designed to be flexible and easy to modify, allowing developers create new features.
